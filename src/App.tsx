@@ -1,11 +1,16 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <div id="tablesWrapper">
+        <div>
+          <div>Aprender</div>
+          <div>Treinar</div>
+        </div>
         <h2 id="data-structures">
           Escolha uma operação e aprenda! (site em desenvolvimento...)
         </h2>
@@ -41,7 +46,9 @@ function App() {
                 </a>
               </td>
               <td>
-                <code className="green">Θ(1)</code>
+                <Link to={`algo/array_access`}>
+                  <code className="green">Θ(1)</code>
+                </Link>
               </td>
               <td>
                 <code className="yellow">Θ(n)</code>
