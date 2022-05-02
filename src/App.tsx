@@ -1,15 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Link } from "react-router-dom";
 
+// import [btnColor, setbtnColor] = useState()
+
 function App() {
+  const [color1, setColor1] = useState("pink");
+  const [color2, setColor2] = useState("white");
+  const [color3, setColor3] = useState("white");
+
+  const handleColor = (s: string) => {
+    setColor1(s === "btn_aprender" ? "pink" : "white");
+    setColor2(s === "btn_treinar" ? "pink" : "white");
+    setColor3(s === "btn_sobre" ? "pink" : "white");
+    // if (s === "btn_aprender") setColor1("blue");
+    // else if (s === "btn_treinar") setColor2("blue");
+    // else if (s === "btn_sobre") setColor3("blue");
+  };
+
   return (
     <div className="App">
       <div id="tablesWrapper">
-        <div>
-          <div>Aprender</div>
-          <div>Treinar</div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "4px",
+            marginTop: "20px",
+          }}
+        >
+          <button
+            className="btn_page"
+            style={{ color: color1 }}
+            onClick={() => {
+              handleColor("btn_aprender");
+            }}
+          >
+            Aprender
+          </button>
+          <button
+            className="btn_page"
+            style={{ color: color2 }}
+            onClick={() => {
+              handleColor("btn_treinar");
+            }}
+          >
+            Treinar
+          </button>
+          <Link to="about">
+            <button
+              className="btn_page"
+              style={{ color: color3 }}
+              onClick={() => {
+                handleColor("btn_sobre");
+              }}
+            >
+              Sobre
+            </button>
+          </Link>
         </div>
         <h2 id="data-structures">
           Escolha uma operação e aprenda! (site em desenvolvimento...)
@@ -49,7 +98,9 @@ function App() {
                 </Link>
               </td>
               <td>
-                <code className="yellow">Θ(n)</code>
+                <Link to={`algo/array_search`}>
+                  <code className="yellow">Θ(n)</code>
+                </Link>
               </td>
               <td>
                 <code className="yellow">Θ(n)</code>
@@ -58,10 +109,14 @@ function App() {
                 <code className="yellow">Θ(n)</code>
               </td>
               <td>
-                <code className="green">O(1)</code>
+                <Link to={`algo/array_access`}>
+                  <code className="green">O(1)</code>
+                </Link>
               </td>
               <td>
-                <code className="yellow">O(n)</code>
+                <Link to={`algo/array_search`}>
+                  <code className="yellow">O(n)</code>
+                </Link>
               </td>
               <td>
                 <code className="yellow">O(n)</code>
