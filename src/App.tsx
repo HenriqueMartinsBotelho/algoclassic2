@@ -41,9 +41,7 @@ function App() {
             </tr>
             <tr>
               <td>
-                <a href="http://en.wikipedia.org/wiki/Array_data_structure">
-                  Array
-                </a>
+                <Link to={`algo/array`}>Array</Link>
               </td>
               <td>
                 <Link to={`algo/array_access`}>

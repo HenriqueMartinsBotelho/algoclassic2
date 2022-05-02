@@ -19,7 +19,13 @@ const Algo = () => {
   });
 
   return (
-    <div>
+    <div
+      style={{
+        background: "#FFF5F5",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <Markdown>{post}</Markdown>
     </div>
   );
