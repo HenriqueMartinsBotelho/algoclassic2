@@ -60,9 +60,35 @@ function App() {
             </button>
           </Link>
         </div>
-        <h2 id="data-structures">
-          Escolha uma operação e aprenda! (site em desenvolvimento...)
-        </h2>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            margin: "20px 0px",
+            // background: "red",
+            border: "3px dashed black",
+            padding: "8px",
+          }}
+        >
+          <h2 id="data-structures">
+            Clique em uma operação na tabela e aprenda!
+          </h2>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <a
+              style={{ color: "blue" }}
+              href="https://github.com/HenriqueMartinsBotelho/algoclassic2"
+            >
+              Repositório GitHub
+            </a>
+          </div>
+        </div>
         <table className="table table-bordered table-striped">
           <tbody>
             <tr>
@@ -103,10 +129,14 @@ function App() {
                 </Link>
               </td>
               <td>
-                <code className="yellow">Θ(n)</code>
+                <Link to={`algo/array_insertion`}>
+                  <code className="yellow">Θ(n)</code>
+                </Link>
               </td>
               <td>
-                <code className="yellow">Θ(n)</code>
+                <Link to={`algo/array_deletion`}>
+                  <code className="yellow">Θ(n)</code>
+                </Link>
               </td>
               <td>
                 <Link to={`algo/array_access`}>
@@ -118,11 +148,13 @@ function App() {
                   <code className="yellow">O(n)</code>
                 </Link>
               </td>
+              <Link to={`algo/array_insertion`}>
+                <code className="yellow">Θ(n)</code>
+              </Link>
               <td>
-                <code className="yellow">O(n)</code>
-              </td>
-              <td>
-                <code className="yellow">O(n)</code>
+                <Link to={`algo/array_deletion`}>
+                  <code className="yellow">O(n)</code>
+                </Link>
               </td>
               <td>
                 <code className="yellow">O(n)</code>

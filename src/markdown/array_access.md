@@ -1,5 +1,12 @@
 #Acessando um elemento de um array
 
+- Complexidade de Tempo no caso médio: O(1).
+- Complexidade de Tempo no pior caso: O(1).
+
+Não importa o número de elementos no array, para acessa-lo é feita uma única multiplicação e adição.
+
+Por baixo dos panos temos algo como: **element_memory_location = start_memory_location + (size_of_element \* index_in_array)**
+
 ##Python
 
 ```python

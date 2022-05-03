@@ -4,7 +4,6 @@ Um dos métodos que podem ser usados para encontrar um elemento em um array é o
 
 - Complexidade de Tempo no caso médio: O(n).
 - Complexidade de Tempo no pior caso: O(n).
-- Complexidade de Espaço: O(n).
 
 ## Implementações
 
