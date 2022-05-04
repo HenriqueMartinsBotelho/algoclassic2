@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Link } from "react-router-dom";
 
@@ -9,11 +8,13 @@ function App() {
   const [color1, setColor1] = useState("pink");
   const [color2, setColor2] = useState("white");
   const [color3, setColor3] = useState("white");
+  const [color4, setColor4] = useState("white");
 
   const handleColor = (s: string) => {
     setColor1(s === "btn_aprender" ? "pink" : "white");
     setColor2(s === "btn_treinar" ? "pink" : "white");
     setColor3(s === "btn_sobre" ? "pink" : "white");
+    setColor4(s === "btn_animacoes" ? "pink" : "white");
     // if (s === "btn_aprender") setColor1("blue");
     // else if (s === "btn_treinar") setColor2("blue");
     // else if (s === "btn_sobre") setColor3("blue");
@@ -47,6 +48,15 @@ function App() {
             }}
           >
             Treinar
+          </button>
+          <button
+            className="btn_page"
+            style={{ color: color4 }}
+            onClick={() => {
+              handleColor("btn_animacoes");
+            }}
+          >
+            Animações
           </button>
           <Link to="about">
             <button
@@ -230,33 +240,46 @@ function App() {
             </tr>
             <tr>
               <td>
-                <a href="http://en.wikipedia.org/wiki/Singly_linked_list#Singly_linked_lists">
-                  Singly-Linked List
-                </a>
+                <Link to={`algo/singly_list`}>Singly-Linked List</Link>
               </td>
               <td>
+                <Link to={`algo/singly_access`}>
+                  <code className="yellow">Θ(n)</code>
+                </Link>
+              </td>
+              <td>
+                <Link to={`algo/singly_search`}>
+                  <code className="yellow">Θ(n)</code>
+                </Link>
+              </td>
+              <td>
+                <Link to={`algo/singly_insertion`}>
+                  <code className="green">Θ(1)</code>
+                </Link>
+              </td>
+              <td>
+                <Link to={`algo/singly_delete`}>
+                  <code className="green">Θ(1)</code>
+                </Link>
+              </td>
+              <Link to={`algo/singly_access`}>
                 <code className="yellow">Θ(n)</code>
+              </Link>
+              <td>
+                <Link to={`algo/singly_search`}>
+                  <code className="yellow">O(n)</code>
+                </Link>
+              </td>
+
+              <td>
+                <Link to={`algo/singly_insertion`}>
+                  <code className="green">O(1)</code>
+                </Link>
               </td>
               <td>
-                <code className="yellow">Θ(n)</code>
-              </td>
-              <td>
-                <code className="green">Θ(1)</code>
-              </td>
-              <td>
-                <code className="green">Θ(1)</code>
-              </td>
-              <td>
-                <code className="yellow">O(n)</code>
-              </td>
-              <td>
-                <code className="yellow">O(n)</code>
-              </td>
-              <td>
-                <code className="green">O(1)</code>
-              </td>
-              <td>
-                <code className="green">O(1)</code>
+                <Link to={`algo/singly_delete`}>
+                  <code className="green">O(1)</code>
+                </Link>
               </td>
               <td>
                 <code className="yellow">O(n)</code>
