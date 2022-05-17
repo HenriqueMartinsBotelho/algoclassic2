@@ -134,7 +134,7 @@ function App() {
                 </Link>
               </td>
               <td>
-                <Link to={`algo/array_search`}>
+                <Link to={`array_search`}>
                   <code className="yellow">Θ(n)</code>
                 </Link>
               </td>
