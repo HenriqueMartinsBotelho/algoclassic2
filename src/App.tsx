@@ -139,7 +139,7 @@ function App() {
                 </Link>
               </td>
               <td>
-                <Link to={`algo/array_insertion`}>
+                <Link to={`array_insertion`}>
                   <code className="yellow">Θ(n)</code>
                 </Link>
               </td>
