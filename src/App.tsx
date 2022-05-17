@@ -129,7 +129,7 @@ function App() {
                 <Link to={`algo/array`}>Array</Link>
               </td>
               <td>
-                <Link to={`algo/array_access`}>
+                <Link to={`array_access`}>
                   <code className="green">Θ(1)</code>
                 </Link>
               </td>
