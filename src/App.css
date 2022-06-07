@@ -62,11 +62,15 @@ table th {
   background-image: linear-gradient(to bottom, #fff, #f2f2f2);
   background-repeat: repeat-x;
   font-weight: normal;
-  text-align: left;
+  text-align: center;
 }
 
 table tr td {
   white-space: nowrap;
+}
+
+table tr {
+  text-align: center;
 }
 
 table tr td:first-child {

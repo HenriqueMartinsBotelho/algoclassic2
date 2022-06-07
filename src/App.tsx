@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Aviso
-        message=" Projeto em desenvolvimento! 4% concluído 😅"
+        message=" Projeto em desenvolvimento! 5% concluído 😅 - Atualizado em: 07/06/2022"
         repository="https://github.com/HenriqueMartinsBotelho/algoclassic2"
         reponame="algoclassic2"
       />
@@ -110,26 +110,27 @@ function App() {
             <tbody>
               <tr>
                 <th>Data Structure</th>
-                <th colSpan={8}>Time Complexity</th>
-                <th>Space Complexity</th>
+                <th colSpan={4}>Time Complexity</th>
+                <th colSpan={4}></th>
+                {/* <th>Space Complexity</th> */}
               </tr>
               <tr>
                 <th />
-                <th colSpan={4}>Average</th>
-                <th colSpan={4}>Worst</th>
+                <th colSpan={4}>Average/Worst</th>
+                <th colSpan={4}>Space Complexity</th>
+                {/* <th>Worstt</th> */}
+              </tr>
+              <tr>
+                <th />
+                <th>Access</th>
+                <th>Search</th>
+                <th>Insertion</th>
+                <th>Deletion</th>
                 <th>Worst</th>
-              </tr>
-              <tr>
-                <th />
-                <th>Access</th>
-                <th>Search</th>
-                <th>Insertion</th>
-                <th>Deletion</th>
-                <th>Access</th>
-                <th>Search</th>
-                <th>Insertion</th>
-                <th>Deletion</th>
-                <th />
+                {/* <th>Access</th> */}
+                {/* <th>Search</th> */}
+                {/* <th>Insertion</th> */}
+                {/* <th>Deletion</th> */}
               </tr>
               <tr>
                 <td>
@@ -138,39 +139,25 @@ function App() {
                 <td>
                   <Link to={`array_access`}>
                     <code className="green">Θ(1)</code>
+                    <code className="green">Θ(1)</code>
                   </Link>
                 </td>
                 <td>
                   <Link to={`array_search`}>
+                    <code className="yellow">Θ(n)</code>
                     <code className="yellow">Θ(n)</code>
                   </Link>
                 </td>
                 <td>
                   <Link to={`array_insertion`}>
                     <code className="yellow">Θ(n)</code>
+                    <code className="yellow">Θ(n)</code>
                   </Link>
                 </td>
                 <td>
                   <Link to={`algo/array_deletion`}>
                     <code className="yellow">Θ(n)</code>
-                  </Link>
-                </td>
-                <td>
-                  <Link to={`algo/array_access`}>
-                    <code className="green">O(1)</code>
-                  </Link>
-                </td>
-                <td>
-                  <Link to={`algo/array_search`}>
-                    <code className="yellow">O(n)</code>
-                  </Link>
-                </td>
-                <Link to={`algo/array_insertion`}>
-                  <code className="yellow">Θ(n)</code>
-                </Link>
-                <td>
-                  <Link to={`algo/array_deletion`}>
-                    <code className="yellow">O(n)</code>
+                    <code className="yellow">Θ(n)</code>
                   </Link>
                 </td>
                 <td>
@@ -185,28 +172,21 @@ function App() {
                 </td>
                 <td>
                   <code className="yellow">Θ(n)</code>
+                  <code className="yellow">Θ(n)</code>
                 </td>
                 <td>
+                  <code className="yellow">Θ(n)</code>
                   <code className="yellow">Θ(n)</code>
                 </td>
                 <td>
                   <code className="green">Θ(1)</code>
-                </td>
-                <td>
                   <code className="green">Θ(1)</code>
                 </td>
                 <td>
-                  <code className="yellow">O(n)</code>
+                  <code className="green">Θ(1)</code>
+                  <code className="green">Θ(1)</code>
                 </td>
-                <td>
-                  <code className="yellow">O(n)</code>
-                </td>
-                <td>
-                  <code className="green">O(1)</code>
-                </td>
-                <td>
-                  <code className="green">O(1)</code>
-                </td>
+
                 <td>
                   <code className="yellow">O(n)</code>
                 </td>
@@ -219,28 +199,21 @@ function App() {
                 </td>
                 <td>
                   <code className="yellow">Θ(n)</code>
+                  <code className="yellow">Θ(n)</code>
                 </td>
                 <td>
+                  <code className="yellow">Θ(n)</code>
                   <code className="yellow">Θ(n)</code>
                 </td>
                 <td>
                   <code className="green">Θ(1)</code>
-                </td>
-                <td>
                   <code className="green">Θ(1)</code>
                 </td>
                 <td>
-                  <code className="yellow">O(n)</code>
+                  <code className="green">Θ(1)</code>
+                  <code className="green">Θ(1)</code>
                 </td>
-                <td>
-                  <code className="yellow">O(n)</code>
-                </td>
-                <td>
-                  <code className="green">O(1)</code>
-                </td>
-                <td>
-                  <code className="green">O(1)</code>
-                </td>
+
                 <td>
                   <code className="yellow">O(n)</code>
                 </td>
@@ -252,42 +225,28 @@ function App() {
                 <td>
                   <Link to={`algo/singly_access`}>
                     <code className="yellow">Θ(n)</code>
+                    <code className="yellow">Θ(n)</code>
                   </Link>
                 </td>
                 <td>
                   <Link to={`algo/singly_search`}>
+                    <code className="yellow">Θ(n)</code>
                     <code className="yellow">Θ(n)</code>
                   </Link>
                 </td>
                 <td>
                   <Link to={`algo/singly_insertion`}>
                     <code className="green">Θ(1)</code>
+                    <code className="green">Θ(1)</code>
                   </Link>
                 </td>
                 <td>
                   <Link to={`algo/singly_delete`}>
                     <code className="green">Θ(1)</code>
-                  </Link>
-                </td>
-                <Link to={`algo/singly_access`}>
-                  <code className="yellow">Θ(n)</code>
-                </Link>
-                <td>
-                  <Link to={`algo/singly_search`}>
-                    <code className="yellow">O(n)</code>
+                    <code className="green">Θ(1)</code>
                   </Link>
                 </td>
 
-                <td>
-                  <Link to={`algo/singly_insertion`}>
-                    <code className="green">O(1)</code>
-                  </Link>
-                </td>
-                <td>
-                  <Link to={`algo/singly_delete`}>
-                    <code className="green">O(1)</code>
-                  </Link>
-                </td>
                 <td>
                   <code className="yellow">O(n)</code>
                 </td>
@@ -300,28 +259,21 @@ function App() {
                 </td>
                 <td>
                   <code className="yellow">Θ(n)</code>
+                  <code className="yellow">Θ(n)</code>
                 </td>
                 <td>
+                  <code className="yellow">Θ(n)</code>
                   <code className="yellow">Θ(n)</code>
                 </td>
                 <td>
                   <code className="green">Θ(1)</code>
-                </td>
-                <td>
                   <code className="green">Θ(1)</code>
                 </td>
                 <td>
-                  <code className="yellow">O(n)</code>
+                  <code className="green">Θ(1)</code>
+                  <code className="green">Θ(1)</code>
                 </td>
-                <td>
-                  <code className="yellow">O(n)</code>
-                </td>
-                <td>
-                  <code className="green">O(1)</code>
-                </td>
-                <td>
-                  <code className="green">O(1)</code>
-                </td>
+
                 <td>
                   <code className="yellow">O(n)</code>
                 </td>
@@ -332,28 +284,21 @@ function App() {
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow">Θ(n)</code>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow">Θ(n)</code>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow">Θ(n)</code>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow">Θ(n)</code>
                 </td>
-                <td>
-                  <code className="yellow">O(n)</code>
-                </td>
-                <td>
-                  <code className="yellow">O(n)</code>
-                </td>
-                <td>
-                  <code className="yellow">O(n)</code>
-                </td>
-                <td>
-                  <code className="yellow">O(n)</code>
-                </td>
+
                 <td>
                   <code className="orange">O(n log(n))</code>
                 </td>
@@ -366,28 +311,21 @@ function App() {
                 </td>
                 <td>
                   <code className="gray">N/A</code>
-                </td>
-                <td>
-                  <code className="green">Θ(1)</code>
-                </td>
-                <td>
-                  <code className="green">Θ(1)</code>
-                </td>
-                <td>
-                  <code className="green">Θ(1)</code>
-                </td>
-                <td>
                   <code className="gray">N/A</code>
                 </td>
                 <td>
+                  <code className="green">Θ(1)</code>
                   <code className="yellow">O(n)</code>
                 </td>
                 <td>
+                  <code className="green">Θ(1)</code>
                   <code className="yellow">O(n)</code>
                 </td>
                 <td>
+                  <code className="green">Θ(1)</code>
                   <code className="yellow">O(n)</code>
                 </td>
+
                 <td>
                   <code className="yellow">O(n)</code>
                 </td>
@@ -400,28 +338,21 @@ function App() {
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow">O(n)</code>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow">O(n)</code>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow">O(n)</code>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
                   <code className="yellow">O(n)</code>
                 </td>
-                <td>
-                  <code className="yellow">O(n)</code>
-                </td>
-                <td>
-                  <code className="yellow">O(n)</code>
-                </td>
-                <td>
-                  <code className="yellow">O(n)</code>
-                </td>
+
                 <td>
                   <code className="yellow">O(n)</code>
                 </td>
@@ -434,26 +365,18 @@ function App() {
                 </td>
                 <td>
                   <code className="gray">N/A</code>
-                </td>
-                <td>
-                  <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
                   <code className="gray">N/A</code>
                 </td>
                 <td>
+                  <code className="yellow-green">Θ(log(n))</code>
                   <code className="yellow">O(n)</code>
                 </td>
                 <td>
+                  <code className="yellow-green">Θ(log(n))</code>
                   <code className="yellow">O(n)</code>
                 </td>
                 <td>
+                  <code className="yellow-green">Θ(log(n))</code>
                   <code className="yellow">O(n)</code>
                 </td>
                 <td>
@@ -466,27 +389,19 @@ function App() {
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
                   <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
                   <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
-                  <code className="yellow-green">O(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
-                  <code className="yellow-green">O(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">O(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">O(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
                   <code className="yellow">O(n)</code>
@@ -500,27 +415,19 @@ function App() {
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
                   <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
                   <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
-                  <code className="yellow-green">O(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
-                  <code className="yellow-green">O(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">O(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">O(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
                   <code className="yellow">O(n)</code>
@@ -534,27 +441,19 @@ function App() {
                 </td>
                 <td>
                   <code className="gray">N/A</code>
-                </td>
-                <td>
-                  <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
                   <code className="gray">N/A</code>
                 </td>
                 <td>
-                  <code className="yellow-green">O(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
-                  <code className="yellow-green">O(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
-                  <code className="yellow-green">O(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
                   <code className="yellow">O(n)</code>
@@ -566,27 +465,19 @@ function App() {
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
                   <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
                   <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
-                  <code className="yellow-green">O(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
-                  <code className="yellow-green">O(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">O(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">O(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
+                  <code className="yellow-green">Θ(log(n))</code>
                 </td>
                 <td>
                   <code className="yellow">O(n)</code>
@@ -598,26 +489,18 @@ function App() {
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
-                  <code className="yellow-green">Θ(log(n))</code>
-                </td>
-                <td>
                   <code className="yellow">O(n)</code>
                 </td>
                 <td>
+                  <code className="yellow-green">Θ(log(n))</code>
                   <code className="yellow">O(n)</code>
                 </td>
                 <td>
+                  <code className="yellow-green">Θ(log(n))</code>
                   <code className="yellow">O(n)</code>
                 </td>
                 <td>
+                  <code className="yellow-green">Θ(log(n))</code>
                   <code className="yellow">O(n)</code>
                 </td>
                 <td>

@@ -52,26 +52,12 @@ export const ArrayAccess = () => {
         }}
       >
         <CodeMirror
-          value="let a = [10, 20, 30, 40];
-          (function(){
-            return a[2]
-           })();
-          "
+          value={`let a = [10, 20, 30, 40];\nconst f = () => {return a[2]};\nconsole.log(f())`}
           width="300px"
           // height="200px"
           extensions={[javascript({ jsx: true })]}
-          onChange={(value, viewUpdate) => {
-            // console.log("value:", value);
-            setCode(value);
-          }}
         />
-        <button
-          onClick={() => {
-            runCode(code);
-          }}
-        >
-          RUN
-        </button>
+
         <div
           style={{
             width: "300px",
@@ -79,7 +65,7 @@ export const ArrayAccess = () => {
           }}
         >
           <div style={{ display: "flex" }}>
-            Output: &nbsp;
+            Output: 30
             <div style={{ color: "#EB2672", fontWeight: "bold" }}>{output}</div>
           </div>
         </div>

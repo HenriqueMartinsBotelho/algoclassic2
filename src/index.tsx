@@ -8,6 +8,7 @@ import Images from "./pages/Images/Images";
 import About from "./pages/About/About";
 import reportWebVitals from "./reportWebVitals";
 import { ArrayAccess } from "./articles/ArrayAccess";
+import { ArraySearch } from "./articles/ArraySearch";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -21,6 +22,7 @@ root.render(
           <Route path=":id" element={<Algo />} />
         </Route>
         <Route path="array_access" element={<ArrayAccess />} />
+        <Route path="array_search" element={<ArraySearch />} />
         <Route path="images" element={<Images />} />
         <Route path="about" element={<About />} />
       </Routes>
