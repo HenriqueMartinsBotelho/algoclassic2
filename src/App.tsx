@@ -106,6 +106,8 @@ function App() {
               </a>
             </div>
           </div>
+          <h3>🟢 Completo - 🔴 Desenvolvendo </h3>
+
           <table className="table table-bordered table-striped">
             <tbody>
               <tr>
@@ -134,7 +136,7 @@ function App() {
               </tr>
               <tr>
                 <td>
-                  <Link to={`algo/array`}>Array</Link>
+                  <Link to={`algo/array`}>🟢Array</Link>
                 </td>
                 <td>
                   <Link to={`array_access`}>
@@ -167,7 +169,7 @@ function App() {
               <tr>
                 <td>
                   <a href="http://en.wikipedia.org/wiki/Stack_(abstract_data_type)">
-                    Stack
+                    🔴Stack
                   </a>
                 </td>
                 <td>
@@ -194,7 +196,7 @@ function App() {
               <tr>
                 <td>
                   <a href="http://en.wikipedia.org/wiki/Queue_(abstract_data_type)">
-                    Queue
+                    🔴 Queue
                   </a>
                 </td>
                 <td>
@@ -220,7 +222,7 @@ function App() {
               </tr>
               <tr>
                 <td>
-                  <Link to={`algo/singly_list`}>Singly-Linked List</Link>
+                  <Link to={`algo/singly_list`}> 🔴 Singly-Linked List</Link>
                 </td>
                 <td>
                   <Link to={`algo/singly_access`}>
@@ -254,7 +256,7 @@ function App() {
               <tr>
                 <td>
                   <a href="http://en.wikipedia.org/wiki/Doubly_linked_list">
-                    Doubly-Linked List
+                    🔴 Doubly-Linked List
                   </a>
                 </td>
                 <td>
@@ -280,7 +282,9 @@ function App() {
               </tr>
               <tr>
                 <td>
-                  <a href="http://en.wikipedia.org/wiki/Skip_list">Skip List</a>
+                  <a href="http://en.wikipedia.org/wiki/Skip_list">
+                    🔴 Skip List
+                  </a>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
@@ -306,7 +310,7 @@ function App() {
               <tr>
                 <td>
                   <a href="http://en.wikipedia.org/wiki/Hash_table">
-                    Hash Table
+                    🔴 Hash Table
                   </a>
                 </td>
                 <td>
@@ -333,7 +337,7 @@ function App() {
               <tr>
                 <td>
                   <a href="http://en.wikipedia.org/wiki/Binary_search_tree">
-                    Binary Search Tree
+                    🔴 Binary Search Tree
                   </a>
                 </td>
                 <td>
@@ -360,7 +364,7 @@ function App() {
               <tr>
                 <td>
                   <a href="https://en.wikipedia.org/wiki/Cartesian_tree">
-                    Cartesian Tree
+                    🔴 Cartesian Tree
                   </a>
                 </td>
                 <td>
@@ -385,7 +389,7 @@ function App() {
               </tr>
               <tr>
                 <td>
-                  <a href="http://en.wikipedia.org/wiki/B_tree">B-Tree</a>
+                  <a href="http://en.wikipedia.org/wiki/B_tree">🔴 B-Tree</a>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
@@ -410,7 +414,7 @@ function App() {
               <tr>
                 <td>
                   <a href="http://en.wikipedia.org/wiki/Red-black_tree">
-                    Red-Black Tree
+                    🔴 Red-Black Tree
                   </a>
                 </td>
                 <td>
@@ -436,7 +440,7 @@ function App() {
               <tr>
                 <td>
                   <a href="https://en.wikipedia.org/wiki/Splay_tree">
-                    Splay Tree
+                    🔴 Splay Tree
                   </a>
                 </td>
                 <td>
@@ -461,7 +465,9 @@ function App() {
               </tr>
               <tr>
                 <td>
-                  <a href="http://en.wikipedia.org/wiki/AVL_tree">AVL Tree</a>
+                  <a href="http://en.wikipedia.org/wiki/AVL_tree">
+                    🔴 AVL Tree
+                  </a>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
@@ -485,7 +491,7 @@ function App() {
               </tr>
               <tr>
                 <td>
-                  <a href="http://en.wikipedia.org/wiki/K-d_tree">KD Tree</a>
+                  <a href="http://en.wikipedia.org/wiki/K-d_tree">🔴 KD Tree</a>
                 </td>
                 <td>
                   <code className="yellow-green">Θ(log(n))</code>
