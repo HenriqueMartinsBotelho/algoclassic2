@@ -6,25 +6,10 @@ import { Aviso } from "./components/Aviso";
 // import [btnColor, setbtnColor] = useState()
 
 function App() {
-  const [color1, setColor1] = useState("pink");
-  const [color2, setColor2] = useState("white");
-  const [color3, setColor3] = useState("white");
-  const [color4, setColor4] = useState("white");
-
-  const handleColor = (s: string) => {
-    setColor1(s === "btn_aprender" ? "pink" : "white");
-    setColor2(s === "btn_treinar" ? "pink" : "white");
-    setColor3(s === "btn_sobre" ? "pink" : "white");
-    setColor4(s === "btn_animacoes" ? "pink" : "white");
-    // if (s === "btn_aprender") setColor1("blue");
-    // else if (s === "btn_treinar") setColor2("blue");
-    // else if (s === "btn_sobre") setColor3("blue");
-  };
-
   return (
     <>
       <Aviso
-        message=" Projeto em desenvolvimento! 5% concluído 😅 - Atualizado em: 07/06/2022"
+        message=" Projeto em desenvolvimento! 6% concluído 😅 - Atualizado em: 09/06/2022"
         repository="https://github.com/HenriqueMartinsBotelho/algoclassic2"
         reponame="algoclassic2"
       />
@@ -38,44 +23,18 @@ function App() {
               marginTop: "20px",
             }}
           >
-            <button
-              className="btn_page"
-              style={{ color: color1 }}
-              onClick={() => {
-                handleColor("btn_aprender");
-              }}
-            >
-              Aprender
+            <button className="btn_page">
+              <Link to="/">Home</Link>
             </button>
-            <button
-              className="btn_page"
-              style={{ color: color2 }}
-              onClick={() => {
-                handleColor("btn_treinar");
-              }}
-            >
-              Treinar
+            <button className="btn_page">
+              <Link to="training">Treinar</Link>
             </button>
-            <button
-              className="btn_page"
-              style={{ color: color4 }}
-              onClick={() => {
-                handleColor("btn_animacoes");
-              }}
-            >
-              Animações
+            <button className="btn_page">
+              <Link to="/">Animações</Link>
             </button>
-            <Link to="about">
-              <button
-                className="btn_page"
-                style={{ color: color3 }}
-                onClick={() => {
-                  handleColor("btn_sobre");
-                }}
-              >
-                Sobre
-              </button>
-            </Link>
+            <button className="btn_page">
+              <Link to="about">Sobre</Link>
+            </button>
           </div>
           <div
             style={{
@@ -151,13 +110,13 @@ function App() {
                   </Link>
                 </td>
                 <td>
-                  <Link to={`array_insertion`}>
+                  <Link to={`array_insert`}>
                     <code className="yellow">Θ(n)</code>
                     <code className="yellow">Θ(n)</code>
                   </Link>
                 </td>
                 <td>
-                  <Link to={`algo/array_deletion`}>
+                  <Link to={`array_delete`}>
                     <code className="yellow">Θ(n)</code>
                     <code className="yellow">Θ(n)</code>
                   </Link>
@@ -222,28 +181,28 @@ function App() {
               </tr>
               <tr>
                 <td>
-                  <Link to={`algo/singly_list`}> 🔴 Singly-Linked List</Link>
+                  <Link to={`algo/singly_list`}> 🟢 Singly-Linked List</Link>
                 </td>
                 <td>
-                  <Link to={`algo/singly_access`}>
+                  <Link to={`sll_access`}>
                     <code className="yellow">Θ(n)</code>
                     <code className="yellow">Θ(n)</code>
                   </Link>
                 </td>
                 <td>
-                  <Link to={`algo/singly_search`}>
+                  <Link to={`sll_search`}>
                     <code className="yellow">Θ(n)</code>
                     <code className="yellow">Θ(n)</code>
                   </Link>
                 </td>
                 <td>
-                  <Link to={`algo/singly_insertion`}>
+                  <Link to={`sll_insert`}>
                     <code className="green">Θ(1)</code>
                     <code className="green">Θ(1)</code>
                   </Link>
                 </td>
                 <td>
-                  <Link to={`algo/singly_delete`}>
+                  <Link to={`sll_delete`}>
                     <code className="green">Θ(1)</code>
                     <code className="green">Θ(1)</code>
                   </Link>

@@ -9,6 +9,10 @@ import About from "./pages/About/About";
 import reportWebVitals from "./reportWebVitals";
 import { ArrayAccess } from "./articles/ArrayAccess";
 import { ArraySearch } from "./articles/ArraySearch";
+import { ArrayInsert } from "./articles/ArrayInsert";
+import { ArrayDelete } from "./articles/ArrayDelete";
+import Training from "./pages/training/Training";
+import { SLLAccess, SLLSearch, SLLInsert, SLLDelete } from "./articles/";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -23,6 +27,13 @@ root.render(
         </Route>
         <Route path="array_access" element={<ArrayAccess />} />
         <Route path="array_search" element={<ArraySearch />} />
+        <Route path="array_insert" element={<ArrayInsert />} />
+        <Route path="array_delete" element={<ArrayDelete />} />
+        <Route path="sll_access" element={<SLLAccess />} />
+        <Route path="sll_search" element={<SLLSearch />} />
+        <Route path="sll_insert" element={<SLLInsert />} />
+        <Route path="sll_delete" element={<SLLDelete />} />
+        <Route path="training" element={<Training />} />
         <Route path="images" element={<Images />} />
         <Route path="about" element={<About />} />
       </Routes>
