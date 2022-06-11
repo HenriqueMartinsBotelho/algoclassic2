@@ -2,27 +2,25 @@ import React from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
 
-export const ArrayDelete = () => {
-  const code = `let arr = [10, 20, 30, 40]
-let i = 2
-arr.splice(i, 1)
-console.log(arr)
+export const QueueDelete = () => {
+  const code = `let queue = [10,20,30];
+queue.shift();
+console.log(queue)
   `;
 
   return (
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h1>Deletar um elemento em um array.</h1>
+      <h1>Deletar um elemento em uma fila.</h1>
       <ul>
-        <li>- Complexidade de Tempo no caso médio: O(n).</li>
-        <li>- Complexidade de Tempo no pior caso: O(n).</li>
+        <li>- Complexidade de Tempo no caso médio: O(1).</li>
+        <li>- Complexidade de Tempo no pior caso: O(1).</li>
       </ul>
 
       <h2>Implementações</h2>
       <div>
-        Dado um array <strong>arr</strong> e uma posição <strong>i</strong>{" "}
-        remover o elemento após essa posição.
+        Dado um fila <strong>queue</strong> delete um elemento.
         <br /> <br />
       </div>
       <div
@@ -43,7 +41,7 @@ console.log(arr)
           extensions={[javascript({ jsx: true })]}
         />
 
-        <div style={{ alignSelf: "start" }}>Output: [10, 20, 40]</div>
+        <div style={{ alignSelf: "start" }}>Output: [20,30] </div>
       </div>
     </div>
   );

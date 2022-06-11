@@ -23,7 +23,7 @@ export const ArraySearch = () => {
           flexDirection: "column",
           alignItems: "center",
           gap: "12px",
-          background: "aliceblue",
+          background: "#db0000",
           padding: "0px 8px",
         }}
       >
@@ -31,7 +31,7 @@ export const ArraySearch = () => {
         <CodeMirror
           value={`function search(arr, n, x){\n  let i;\n  for (i = 0; i < n; i++) if(arr[i] == x) return i;\n  return -1;\n}
           \narr = [10, 20, 30, 40, 50];\nlet x = 30;\nlet n = arr.length;\nlet result = search(arr, n, x);\nresult === -1
-            ? console.log("Elemento não está presente no arrayElement is not present in array")
+            ? console.log("Elemento não está presente.")
             : console.log("Elemento presente na posição " + result);
           `}
           width="740px"

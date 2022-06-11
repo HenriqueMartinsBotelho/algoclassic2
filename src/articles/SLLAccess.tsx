@@ -1,6 +1,8 @@
 import React from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
+import EditeNoGitHub from "../components/EditeNoGitHub";
+import { oneDark } from "@codemirror/theme-one-dark";
 
 export const SLLAccess = () => {
   const code = `class Node{
@@ -27,7 +29,7 @@ const getNth = (head, index) => {
             return current
         }
         count++
-        current = current.next
+        current = current.next 
     }
     return -1;
 }
@@ -40,6 +42,7 @@ console.log(element.val)`;
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
+      <EditeNoGitHub link="https://github.com/HenriqueMartinsBotelho/algoclassic2/blob/main/src/articles/SLLAccess.tsx" />
       <h1>Acessar um elemento em uma SLL.</h1>
       <ul>
         <li>- Complexidade de Tempo no caso médio: O(n).</li>
@@ -56,7 +59,7 @@ console.log(element.val)`;
           flexDirection: "column",
           alignItems: "center",
           gap: "12px",
-          background: "aliceblue",
+          background: "#db0000",
           padding: "0px 8px",
         }}
       >
@@ -65,6 +68,7 @@ console.log(element.val)`;
           value={code}
           width="740px"
           // height="200px"
+          // theme={oneDark}
           extensions={[javascript({ jsx: true })]}
         />
 

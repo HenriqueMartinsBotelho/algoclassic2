@@ -28,11 +28,14 @@ const About = () => {
         </a>{" "}
         disponível originalmente em{" "}
         <a style={{ color: "#EE0B86" }} href="https://www.bigocheatsheet.com/">
-          https://www.bigocheatsheet.com/
-        </a>{" "}
-        . Decidi aperfeiçoar essa criação explicando os algoritmos, as
-        estruturas de dados e suas operações em três linguagens:{" "}
-        <span style={{ color: "yellow" }}>Python, JavaScript e C++.</span>
+          https://www.bigocheatsheet.com/.{" "}
+        </a>
+        Decidi fazer uma versão interativa onde o usuário pode ter acesso a
+        explicação de cada operação em várias linguagens. O projeto é Open
+        source e qualquer pessoa pode colaborar acessando{" "}
+        <a href="https://github.com/HenriqueMartinsBotelho/algoclassic2">
+          https://github.com/HenriqueMartinsBotelho/algoclassic2.
+        </a>
       </div>
     </div>
   );

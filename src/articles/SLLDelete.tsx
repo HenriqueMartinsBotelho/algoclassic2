@@ -66,7 +66,7 @@ printLinkedList(head)`;
           flexDirection: "column",
           alignItems: "center",
           gap: "12px",
-          background: "aliceblue",
+          background: "#db0000",
           padding: "0px 8px",
         }}
       >

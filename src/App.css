@@ -1,24 +1,38 @@
+body {
+  background-color: #000;
+  color: whitesmoke;
+}
+
+.cm-line {
+  color: black;
+}
+
 .App {
   display: flex;
   justify-content: center;
+  background-color: #000;
+  color: whitesmoke;
 }
 
 h1 {
   font-size: 30px;
   line-height: 30px;
-  color: #444;
+  color: whitesmoke;
 }
 
 h2 {
   font-size: 24px;
   line-height: 24px;
-  color: #444;
+  color: whitesmoke;
   margin-top: 30px;
 }
 
-a,
 a:visited {
   color: #53d000;
+}
+
+a {
+  color: #5684e7 !important;
 }
 
 .clearfix:after {
@@ -33,6 +47,11 @@ a:visited {
 
 table {
   display: inline-block;
+  color: black;
+  border: 1px dashed white;
+  padding: 8px;
+  border-radius: 8px;
+  /* font-weight: 700; */
 }
 
 table code {

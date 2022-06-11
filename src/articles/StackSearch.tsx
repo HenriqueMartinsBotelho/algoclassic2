@@ -2,50 +2,35 @@ import React from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
 
-export const SLLSearch = () => {
-  const code = `class Node{
-    constructor(val){
-        this.val = val;
-        this.next = null;
-    }
+export const StackSearch = () => {
+  const code = `function search(arr, n, x){
+let i;
+for (i = 0; i < n; i++) if(arr[i] == x) return i;
+return -1;
 }
-const a = new Node('A')
-const b = new Node('B')
-const c = new Node('C')
-const d = new Node('D')
-    
-a.next = b
-b.next = c
-c.next = d
-
-// Início do código principal
-const searchElement = (head, val) => {
-  let current = head
-  while (current != null){
-    if(current.val === val) return true
-    current = current.next
-  }
-  return false
-}
-// Fim
-
-console.log(searchElement(a, 'B'))
-console.log(searchElement(a, 'E'))`;
+        
+arr = [10, 20, 30, 40, 50];
+let x = 30;
+let n = arr.length;
+let result = search(arr, n, x);
+result === -1
+          ? console.log("Elemento não está presente.")
+          : console.log("Elemento presente na posição " + result);
+  `;
 
   return (
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h1>Encontrar um elemento em uma SLL.</h1>
+      <h1>Encontrar um elemento em uma pilha.</h1>
       <ul>
         <li>- Complexidade de Tempo no caso médio: O(n).</li>
         <li>- Complexidade de Tempo no pior caso: O(n).</li>
       </ul>
+
       <h2>Implementações</h2>
       <div>
-        Dado uma Singly Linked List <strong>SLL</strong> e um valor{" "}
-        <strong>val</strong> retorne <strong>true</strong> se existe um elemento
-        com esse valor e <strong>false</strong> caso contrário.
+        Dado um pilha encontar um elemento nela.
         <br /> <br />
       </div>
       <div
@@ -63,12 +48,11 @@ console.log(searchElement(a, 'E'))`;
           value={code}
           width="740px"
           // height="200px"
-          
           extensions={[javascript({ jsx: true })]}
         />
 
         <div style={{ alignSelf: "start" }}>
-          Output: false <br /> true{" "}
+          Output: Elemento está presente na posição 2
         </div>
       </div>
     </div>

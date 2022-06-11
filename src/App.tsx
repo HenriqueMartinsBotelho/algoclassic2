@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Aviso
-        message=" Projeto em desenvolvimento! 6% concluído 😅 - Atualizado em: 09/06/2022"
+        message=" Projeto em desenvolvimento! 7% concluído 😅 - Atualizado em: 11/06/2022"
         repository="https://github.com/HenriqueMartinsBotelho/algoclassic2"
         reponame="algoclassic2"
       />
@@ -19,7 +19,7 @@ function App() {
             style={{
               display: "flex",
               justifyContent: "center",
-              gap: "4px",
+              gap: "18px",
               marginTop: "20px",
             }}
           >
@@ -70,24 +70,24 @@ function App() {
           <table className="table table-bordered table-striped">
             <tbody>
               <tr>
-                <th>Data Structure</th>
-                <th colSpan={4}>Time Complexity</th>
+                <th>Estrutura</th>
+                <th colSpan={4}>Complexidade de Tempo</th>
                 <th colSpan={4}></th>
                 {/* <th>Space Complexity</th> */}
               </tr>
               <tr>
                 <th />
-                <th colSpan={4}>Average/Worst</th>
-                <th colSpan={4}>Space Complexity</th>
+                <th colSpan={4}>Médio/Pior</th>
+                <th colSpan={4}>Complexidade de espaço</th>
                 {/* <th>Worstt</th> */}
               </tr>
               <tr>
                 <th />
-                <th>Access</th>
-                <th>Search</th>
-                <th>Insertion</th>
-                <th>Deletion</th>
-                <th>Worst</th>
+                <th>Acessar</th>
+                <th>Buscar</th>
+                <th>Inserir</th>
+                <th>Deletar</th>
+                <th>Pior</th>
                 {/* <th>Access</th> */}
                 {/* <th>Search</th> */}
                 {/* <th>Insertion</th> */}
@@ -128,24 +128,32 @@ function App() {
               <tr>
                 <td>
                   <a href="http://en.wikipedia.org/wiki/Stack_(abstract_data_type)">
-                    🔴Stack
+                    🟢Stack
                   </a>
                 </td>
                 <td>
-                  <code className="yellow">Θ(n)</code>
-                  <code className="yellow">Θ(n)</code>
+                  <Link to={`stack_access`}>
+                    <code className="yellow">Θ(n)</code>
+                    <code className="yellow">Θ(n)</code>
+                  </Link>
                 </td>
                 <td>
-                  <code className="yellow">Θ(n)</code>
-                  <code className="yellow">Θ(n)</code>
+                  <Link to={`stack_search`}>
+                    <code className="yellow">Θ(n)</code>
+                    <code className="yellow">Θ(n)</code>
+                  </Link>
                 </td>
                 <td>
-                  <code className="green">Θ(1)</code>
-                  <code className="green">Θ(1)</code>
+                  <Link to={`stack_insert`}>
+                    <code className="green">Θ(1)</code>
+                    <code className="green">Θ(1)</code>
+                  </Link>
                 </td>
                 <td>
-                  <code className="green">Θ(1)</code>
-                  <code className="green">Θ(1)</code>
+                  <Link to={`stack_delete`}>
+                    <code className="green">Θ(1)</code>
+                    <code className="green">Θ(1)</code>
+                  </Link>
                 </td>
 
                 <td>
@@ -154,21 +162,29 @@ function App() {
               </tr>
               <tr>
                 <td>
-                  <a href="http://en.wikipedia.org/wiki/Queue_(abstract_data_type)">
-                    🔴 Queue
-                  </a>
+                  <Link to={`queue_access`}>
+                    <a href="http://en.wikipedia.org/wiki/Queue_(abstract_data_type)">
+                      🟢 Queue
+                    </a>
+                  </Link>
                 </td>
                 <td>
-                  <code className="yellow">Θ(n)</code>
-                  <code className="yellow">Θ(n)</code>
+                  <Link to={`queue_insert`}>
+                    <code className="yellow">Θ(n)</code>
+                    <code className="yellow">Θ(n)</code>
+                  </Link>
                 </td>
                 <td>
-                  <code className="yellow">Θ(n)</code>
-                  <code className="yellow">Θ(n)</code>
+                  <Link to={`queue_search`}>
+                    <code className="yellow">Θ(n)</code>
+                    <code className="yellow">Θ(n)</code>
+                  </Link>
                 </td>
                 <td>
-                  <code className="green">Θ(1)</code>
-                  <code className="green">Θ(1)</code>
+                  <Link to={`queue_delete`}>
+                    <code className="green">Θ(1)</code>
+                    <code className="green">Θ(1)</code>
+                  </Link>
                 </td>
                 <td>
                   <code className="green">Θ(1)</code>
@@ -474,20 +490,20 @@ function App() {
               </tr>
             </tbody>
           </table>
-          <h2 id="sorting">Array Sorting Algorithms</h2>
+          <h2 id="sorting">Algoritmos de Ordenação</h2>
           <table className="table table-bordered table-striped">
             <tbody>
               <tr>
-                <th>Algorithm</th>
-                <th colSpan={3}>Time Complexity</th>
-                <th>Space Complexity</th>
+                <th>Algoritmo</th>
+                <th colSpan={3}>Complexidade de Tempo</th>
+                <th>Complexidade de espaço</th>
               </tr>
               <tr>
                 <th />
-                <th>Best</th>
-                <th>Average</th>
-                <th>Worst</th>
-                <th>Worst</th>
+                <th>Melhor</th>
+                <th>Médio</th>
+                <th>Pior</th>
+                <th>Pior</th>
               </tr>
               <tr>
                 <td>

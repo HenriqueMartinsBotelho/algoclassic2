@@ -12,7 +12,20 @@ import { ArraySearch } from "./articles/ArraySearch";
 import { ArrayInsert } from "./articles/ArrayInsert";
 import { ArrayDelete } from "./articles/ArrayDelete";
 import Training from "./pages/training/Training";
-import { SLLAccess, SLLSearch, SLLInsert, SLLDelete } from "./articles/";
+import {
+  SLLAccess,
+  SLLSearch,
+  SLLInsert,
+  SLLDelete,
+  StackInsert,
+  StackDelete,
+  StackSearch,
+  StackAccess,
+  QueueAccess,
+  QueueDelete,
+  QueueSearch,
+  QueueInsert,
+} from "./articles/";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -29,6 +42,14 @@ root.render(
         <Route path="array_search" element={<ArraySearch />} />
         <Route path="array_insert" element={<ArrayInsert />} />
         <Route path="array_delete" element={<ArrayDelete />} />
+        <Route path="stack_insert" element={<StackInsert />} />
+        <Route path="stack_delete" element={<StackDelete />} />
+        <Route path="stack_search" element={<StackSearch />} />
+        <Route path="stack_access" element={<StackAccess />} />
+        <Route path="queue_insert" element={<QueueInsert />} />
+        <Route path="queue_access" element={<QueueAccess />} />
+        <Route path="queue_delete" element={<QueueDelete />} />
+        <Route path="queue_search" element={<QueueSearch />} />
         <Route path="sll_access" element={<SLLAccess />} />
         <Route path="sll_search" element={<SLLSearch />} />
         <Route path="sll_insert" element={<SLLInsert />} />
