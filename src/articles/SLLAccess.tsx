@@ -1,8 +1,9 @@
 import React from "react";
-import CodeMirror from "@uiw/react-codemirror";
-import { javascript } from "@codemirror/lang-javascript";
+// import CodeMirror from "@uiw/react-codemirror";
+// import { javascript } from "@codemirror/lang-javascript";
 import EditeNoGitHub from "../components/EditeNoGitHub";
 import { oneDark } from "@codemirror/theme-one-dark";
+import CodeBox from "../components/CodeBox";
 
 export const SLLAccess = () => {
   const code = `class Node{
@@ -20,7 +21,7 @@ a.next = b
 b.next = c
 c.next = d
 
-// Início do código principal
+// Início do código principal 
 const getNth = (head, index) => {
     let current = head
     let count = 0
@@ -59,18 +60,20 @@ console.log(element.val)`;
           flexDirection: "column",
           alignItems: "center",
           gap: "12px",
-          background: "#db0000",
+          // background: "#db0000",
+          color: 'black',
           padding: "0px 8px",
         }}
       >
         <h2>JavaScript</h2>
-        <CodeMirror
+        {/* <CodeMirror
           value={code}
           width="740px"
           // height="200px"
           // theme={oneDark}
           extensions={[javascript({ jsx: true })]}
-        />
+        /> */}
+        <CodeBox/>
 
         <div style={{ alignSelf: "start" }}>Output: C</div>
       </div>

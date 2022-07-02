@@ -1,29 +1,29 @@
 body {
-  background-color: #000;
-  color: whitesmoke;
-}
-
-.cm-line {
+  background-color: white;
   color: black;
 }
+
+/* .cm-line {
+  color: black;
+} */
 
 .App {
   display: flex;
   justify-content: center;
-  background-color: #000;
-  color: whitesmoke;
+  background-color: whitesmoke;
+  color: black;
 }
 
 h1 {
   font-size: 30px;
   line-height: 30px;
-  color: whitesmoke;
+  color: black;
 }
 
 h2 {
   font-size: 24px;
   line-height: 24px;
-  color: whitesmoke;
+  color: black;
   margin-top: 30px;
 }
 
