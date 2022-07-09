@@ -5,23 +5,18 @@ import { oneDark } from '@codemirror/theme-one-dark';
 
 
 
-const code = `import React from 'react'
-import {Button} from "gaulesui_lib"
-
-export const Page = () => {
-  return (
-    <Button label="Botão">Botão</Button>
-  )
+interface ICodeBox  {
+    code: string,
+    width: string
 }
-  `
 
-const CodeBox = () => {
+const CodeBox = ({code, width}: ICodeBox) => {
   return (
    <>
     <CodeMirror
         theme={oneDark}
           value={code}
-          width="400px"
+          width={width}
           extensions={[javascript({ jsx: true })]}
         />
    </> 

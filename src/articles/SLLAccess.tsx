@@ -73,7 +73,7 @@ console.log(element.val)`;
           // theme={oneDark}
           extensions={[javascript({ jsx: true })]}
         /> */}
-        <CodeBox/>
+        <CodeBox code={code} width="400px"/>
 
         <div style={{ alignSelf: "start" }}>Output: C</div>
       </div>
