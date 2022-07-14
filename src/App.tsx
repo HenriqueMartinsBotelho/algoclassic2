@@ -95,7 +95,7 @@ function App() {
               </tr>
               <tr>
                 <td>
-                  <Link to={`algo/array`}>🟢Array</Link>
+                  <Link to={`algo/array`}>🔴 Array</Link>
                 </td>
                 <td>
                   <Link to={`array_access`}>
@@ -128,7 +128,7 @@ function App() {
               <tr>
                 <td>
                   <a href="http://en.wikipedia.org/wiki/Stack_(abstract_data_type)">
-                    🟢Stack
+                  🔴 Stack
                   </a>
                 </td>
                 <td>
@@ -164,7 +164,7 @@ function App() {
                 <td>
                   <Link to={`queue_access`}>
                     <a href="http://en.wikipedia.org/wiki/Queue_(abstract_data_type)">
-                      🟢 Queue
+                    🔴 Queue
                     </a>
                   </Link>
                 </td>
@@ -197,7 +197,7 @@ function App() {
               </tr>
               <tr>
                 <td>
-                  <Link to={`algo/singly_list`}> 🟢 Singly-Linked List</Link>
+                  <Link to={`algo/singly_list`}> 🔴 Singly-Linked List</Link>
                 </td>
                 <td>
                   <Link to={`sll_access`}>
