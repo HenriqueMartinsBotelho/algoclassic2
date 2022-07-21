@@ -3,13 +3,30 @@ import "./App.css";
 import { Link } from "react-router-dom";
 // import { Aviso } from "./components/Aviso";
 import CodeBox from "./components/CodeBox";
+import codes from "./api/codes";
 
 // import [btnColor, setbtnColor] = useState()
 
 function App() {
   const [algoOrd, setAlgoOrd] = useState();
-  const [dataStructure, setDataStructure] = useState("Array");
-  false;
+  const [dataStructure, setDataStructure] = useState("array");
+  const [dataContent, setDataContent] = useState("");
+  const [option, setOption] = useState("inserir");
+
+  const handleOption = (op) => {
+    setOption(op);
+  };
+
+  const getDataStructure = (tipo) => {
+    // console.log(codes[tipo]);
+    setDataContent(codes[tipo]);
+    return codes[tipo];
+  };
+
+  const handleDataStructure = (tipo) => {
+    setDataStructure(tipo);
+    getDataStructure(tipo);
+  };
 
   return (
     <div style={{ background: "rgb(35, 39, 47)" }}>
@@ -37,10 +54,16 @@ function App() {
               marginTop: "20px",
               gap: "10px",
               height: "100%",
+              flexWrap: "wrap",
             }}
           >
-            <TableA handleDataStructure={setDataStructure} />
-            <AlgoBox dataStructure={dataStructure} />
+            <TableA handleDataStructure={handleDataStructure} />
+            <AlgoBox
+              dataStructure={dataStructure}
+              dataContent={dataContent}
+              option={option}
+              handleOption={handleOption}
+            />
           </div>
           {algoOrd && <TableB />}
         </div>
@@ -49,14 +72,16 @@ function App() {
   );
 }
 
-const AlgoBox = ({ dataStructure }: any) => {
+const AlgoBox = ({ dataStructure, dataContent, option, handleOption }: any) => {
+  const code = dataContent[option];
+
   return (
     <div
       style={{
         display: "flex",
         flexDirection: "column",
-        // flex: 1,
-        width: "100%",
+        flex: 1,
+        // width: "50%",
         height: "100%",
         // width: "30vw",
         // height: "40vh",
@@ -94,10 +119,10 @@ const AlgoBox = ({ dataStructure }: any) => {
             }}
           >
             <div style={{ display: "flex", fontSize: "18px", gap: "12px" }}>
-              <div>Acessar</div>
-              <div>Buscar</div>
-              <div>Inserir</div>
-              <div>Deletar</div>
+              <button onClick={() => handleOption("acessar")}>Acessar</button>
+              <button>Buscar</button>
+              <button>Inserir</button>
+              <button>Deletar</button>
             </div>
             <div style={{ fontSize: "18px" }}>Teoria</div>
           </div>
@@ -112,7 +137,7 @@ const AlgoBox = ({ dataStructure }: any) => {
       >
         <div style={{ display: "flex", width: "50%", height: "100%" }}>
           <CodeBox
-            code="aaa"
+            code={code}
             style={{
               display: "flex",
               height: "100%",
@@ -154,7 +179,8 @@ const TableA = ({ handleDataStructure }: any) => {
         background: "rgb(52, 58, 70)",
         borderRadius: "10px",
         height: "100%",
-        width: "100%",
+        // width: "45%",
+        flex: 1,
         padding: "2px",
       }}
     >
@@ -184,7 +210,7 @@ const TableA = ({ handleDataStructure }: any) => {
             {/* <th>Insertion</th> */}
             {/* <th>Deletion</th> */}
           </tr>
-          <tr onMouseEnter={() => handleDataStructure("Array")}>
+          <tr onMouseEnter={() => handleDataStructure("array")}>
             <td>
               <Link to={`algo/array`}> Array</Link>
             </td>
@@ -216,7 +242,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
-          <tr onMouseEnter={() => handleDataStructure("Stack")}>
+          <tr onMouseEnter={() => handleDataStructure("stack")}>
             <td>
               <a href="http://en.wikipedia.org/wiki/Stack_(abstract_data_type)">
                 Stack

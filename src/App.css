@@ -183,15 +183,17 @@ table tr td:first-child {
 }
 
 .yellow-green {
-  border: 1px solid #286500;
+  border: 1px solid #7e007e;
   color: black;
-  background-color: #c8ea00;
+  background-color: #ee36ee;
 }
 
 .yellow {
-  border: 1px solid #6f6e00;
+  border: 1px solid #2e60aa;
   color: black;
-  background-color: yellow;
+  /* color: white; */
+  background-color: #4577c0;
+  /* font-weight: bold; */
 }
 
 .orange {
