@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import CodeBox from "../CodeBox";
 import OutputBox from "../OutputBox/OutputBox";
+import Button from "./Button";
 
 const AlgoBox = ({
   dataStructure,
@@ -10,6 +11,20 @@ const AlgoBox = ({
   btnColors,
 }: any) => {
   const code = dataContent[option];
+
+  const initialBtnActives = {
+    acessar: false,
+    inserir: false,
+    deletar: false,
+    buscar: false,
+  };
+
+  const [btnActive, setBtnActive] = useState(initialBtnActives);
+
+  const handleClick = (op) => {
+    handleOption(op);
+    setBtnActive({ ...initialBtnActives, [op]: true });
+  };
 
   return (
     <div
@@ -35,15 +50,18 @@ const AlgoBox = ({
       >
         <div style={{ width: "100%" }}>
           <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginBottom: "8px",
-              color: "white",
-              fontSize: "20px",
-            }}
+            // style={{
+            //   display: "flex",
+            //   justifyContent: "center",
+            //   marginBottom: "8px",
+            //   color: "white",
+            //   fontSize: "20px",
+            // }}
+            className="flex justify-center text-cyan-50"
           >
-            {dataStructure.toUpperCase()}
+            <div className="text-lg font-bold">
+              {dataStructure.toUpperCase()}
+            </div>
           </div>
           <div
             style={{
@@ -55,30 +73,30 @@ const AlgoBox = ({
             }}
           >
             <div style={{ display: "flex", fontSize: "18px", gap: "12px" }}>
-              <button
-                style={{ color: btnColors["acessar"] }}
-                onClick={() => handleOption("acessar")}
+              <Button
+                active={btnActive.acessar}
+                onClick={() => handleClick("acessar")}
               >
                 Acessar
-              </button>
-              <button
-                style={{ color: btnColors["buscar"] }}
-                onClick={() => handleOption("buscar")}
+              </Button>
+              <Button
+                active={btnActive.buscar}
+                onClick={() => handleClick("buscar")}
               >
                 Buscar
-              </button>
-              <button
-                style={{ color: btnColors["inserir"] }}
-                onClick={() => handleOption("inserir")}
+              </Button>
+              <Button
+                active={btnActive.inserir}
+                onClick={() => handleClick("inserir")}
               >
                 Inserir
-              </button>
-              <button
-                style={{ color: btnColors["deletar"] }}
-                onClick={() => handleOption("deletar")}
+              </Button>
+              <Button
+                active={btnActive.deletar}
+                onClick={() => handleClick("deletar")}
               >
                 Deletar
-              </button>
+              </Button>
             </div>
             <button style={{ color: "green", fontWeight: "bold" }}>
               Teoria
