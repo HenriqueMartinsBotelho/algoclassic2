@@ -98,9 +98,7 @@ const AlgoBox = ({
                 Deletar
               </Button>
             </div>
-            <button style={{ color: "green", fontWeight: "bold" }}>
-              Teoria
-            </button>
+            <div style={{ color: "green", fontWeight: "bold" }}>🌳</div>
           </div>
         </div>
       </div>
