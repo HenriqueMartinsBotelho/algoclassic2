@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import codes from "./api/codes";
 import AlgoBox from "./components/AlgoBox/AlgoBox";
@@ -7,6 +7,8 @@ import TableA from "./components/TableA/TableA";
 import TableB from "./components/TableB/TableB";
 import TeoriaBox from "./components/TeoriaBox/TeoriaBox";
 import ButtonsHead from "./components/ButtonsHead/ButtonsHead";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function App() {
   const [algoOrd, setAlgoOrd] = useState();
@@ -15,25 +17,14 @@ function App() {
   const [option, setOption] = useState("inserir");
   const [teoria, setTeoria] = useState("");
 
-  // const initialColors = {
-  //   acessar: "black",
-  //   inserir: "black",
-  //   buscar: "black",
-  //   deletar: "black",
-  // };
-
-  // const [btnColors, setbtnColors] = useState(initialColors);
-
   const handleOption = (op) => {
-    // setbtnColors({ ...initialColors, [op]: "red" });
     setOption(op);
   };
 
   const getDataStructure = (tipo) => {
     handleOption("acessar");
     setDataContent(codes[tipo]);
-    // setbtnColors(initialColors);
-    return codes[tipo];
+    return codes[tipo.teste];
   };
 
   const handleDataStructure = (tipo) => {
@@ -64,7 +55,6 @@ function App() {
               marginTop: "20px",
               gap: "10px",
               height: "100%",
-              flexWrap: "wrap",
             }}
           >
             <TableA handleDataStructure={handleDataStructure} />
@@ -93,4 +83,10 @@ function App() {
   );
 }
 
-export default App;
+const AppWrapper = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
+export default AppWrapper;

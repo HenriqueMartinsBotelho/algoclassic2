@@ -1,23 +1,19 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addActiveButton } from "../../redux/btnSlice";
+import { selectBtn } from "../../redux/store";
 import CodeBox from "../CodeBox";
 import OutputBox from "../OutputBox/OutputBox";
 import Button from "./Button";
 
 const AlgoBox = ({ dataStructure, dataContent, option, handleOption }: any) => {
+  const dispatch = useDispatch();
   const code = dataContent[option];
-
-  const initialBtnActives = {
-    acessar: false,
-    inserir: false,
-    deletar: false,
-    buscar: false,
-  };
-
-  const [btnActive, setBtnActive] = useState(initialBtnActives);
+  const state = useSelector(selectBtn);
 
   const handleClick = (op) => {
     handleOption(op);
-    setBtnActive({ ...initialBtnActives, [op]: true });
+    dispatch(addActiveButton(op));
   };
 
   return (
@@ -68,25 +64,25 @@ const AlgoBox = ({ dataStructure, dataContent, option, handleOption }: any) => {
           >
             <div style={{ display: "flex", fontSize: "18px", gap: "12px" }}>
               <Button
-                active={btnActive.acessar}
+                active={state.acessar}
                 onClick={() => handleClick("acessar")}
               >
                 Acessar
               </Button>
               <Button
-                active={btnActive.buscar}
+                active={state.buscar}
                 onClick={() => handleClick("buscar")}
               >
                 Buscar
               </Button>
               <Button
-                active={btnActive.inserir}
+                active={state.inserir}
                 onClick={() => handleClick("inserir")}
               >
                 Inserir
               </Button>
               <Button
-                active={btnActive.deletar}
+                active={state.deletar}
                 onClick={() => handleClick("deletar")}
               >
                 Deletar

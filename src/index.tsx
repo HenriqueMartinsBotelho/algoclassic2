@@ -31,35 +31,33 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="algo" element={<Algo />}>
-          <Route path=":id" element={<Algo />} />
-        </Route>
-        <Route path="array_access" element={<ArrayAccess />} />
-        <Route path="array_search" element={<ArraySearch />} />
-        <Route path="array_insert" element={<ArrayInsert />} />
-        <Route path="array_delete" element={<ArrayDelete />} />
-        <Route path="stack_insert" element={<StackInsert />} />
-        <Route path="stack_delete" element={<StackDelete />} />
-        <Route path="stack_search" element={<StackSearch />} />
-        <Route path="stack_access" element={<StackAccess />} />
-        <Route path="queue_insert" element={<QueueInsert />} />
-        <Route path="queue_access" element={<QueueAccess />} />
-        <Route path="queue_delete" element={<QueueDelete />} />
-        <Route path="queue_search" element={<QueueSearch />} />
-        <Route path="sll_access" element={<SLLAccess />} />
-        <Route path="sll_search" element={<SLLSearch />} />
-        <Route path="sll_insert" element={<SLLInsert />} />
-        <Route path="sll_delete" element={<SLLDelete />} />
-        <Route path="training" element={<Training />} />
-        <Route path="images" element={<Images />} />
-        <Route path="about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="algo" element={<Algo />}>
+        <Route path=":id" element={<Algo />} />
+      </Route>
+      <Route path="array_access" element={<ArrayAccess />} />
+      <Route path="array_search" element={<ArraySearch />} />
+      <Route path="array_insert" element={<ArrayInsert />} />
+      <Route path="array_delete" element={<ArrayDelete />} />
+      <Route path="stack_insert" element={<StackInsert />} />
+      <Route path="stack_delete" element={<StackDelete />} />
+      <Route path="stack_search" element={<StackSearch />} />
+      <Route path="stack_access" element={<StackAccess />} />
+      <Route path="queue_insert" element={<QueueInsert />} />
+      <Route path="queue_access" element={<QueueAccess />} />
+      <Route path="queue_delete" element={<QueueDelete />} />
+      <Route path="queue_search" element={<QueueSearch />} />
+      <Route path="sll_access" element={<SLLAccess />} />
+      <Route path="sll_search" element={<SLLSearch />} />
+      <Route path="sll_insert" element={<SLLInsert />} />
+      <Route path="sll_delete" element={<SLLDelete />} />
+      <Route path="training" element={<Training />} />
+      <Route path="images" element={<Images />} />
+      <Route path="about" element={<About />} />
+    </Routes>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
