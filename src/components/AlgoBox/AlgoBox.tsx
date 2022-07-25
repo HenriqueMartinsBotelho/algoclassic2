@@ -3,13 +3,7 @@ import CodeBox from "../CodeBox";
 import OutputBox from "../OutputBox/OutputBox";
 import Button from "./Button";
 
-const AlgoBox = ({
-  dataStructure,
-  dataContent,
-  option,
-  handleOption,
-  btnColors,
-}: any) => {
+const AlgoBox = ({ dataStructure, dataContent, option, handleOption }: any) => {
   const code = dataContent[option];
 
   const initialBtnActives = {

@@ -20,11 +20,11 @@ const Button = ({
     <button
       className={cn(
         className,
-        "text-base bg-blue-500 leading-tight font-bold border rounded-lg py-2 px-4 focus:ring-1 focus:ring-offset-2 focus:ring-link active:bg-link active:border-link active:text-white active:ring-0 active:ring-offset-0 outline-none inline-flex items-center my-1",
+        "text-base leading-tight  border rounded-lg py-2 px-4 bg-blue-400",
         {
-          "bg-link border-link text-white hover:bg-link focus:bg-link active:bg-link":
+          "bg-link border-4 border-indigo-600 border-link text-white hover:bg-link focus:bg-link active:bg-link":
             active,
-          "bg-transparent text-secondary dark:text-secondary-dark bg-secondary-button dark:bg-secondary-button-dark hover:text-link focus:text-link border-transparent":
+          "bg-transparent  text-secondary dark:text-secondary-dark bg-secondary-button dark:bg-secondary-button-dark hover:text-link focus:text-link border-transparent":
             !active,
         }
       )}

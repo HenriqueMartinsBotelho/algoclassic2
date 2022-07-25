@@ -15,24 +15,24 @@ function App() {
   const [option, setOption] = useState("inserir");
   const [teoria, setTeoria] = useState("");
 
-  const initialColors = {
-    acessar: "black",
-    inserir: "black",
-    buscar: "black",
-    deletar: "black",
-  };
+  // const initialColors = {
+  //   acessar: "black",
+  //   inserir: "black",
+  //   buscar: "black",
+  //   deletar: "black",
+  // };
 
-  const [btnColors, setbtnColors] = useState(initialColors);
+  // const [btnColors, setbtnColors] = useState(initialColors);
 
   const handleOption = (op) => {
-    setbtnColors({ ...initialColors, [op]: "red" });
+    // setbtnColors({ ...initialColors, [op]: "red" });
     setOption(op);
   };
 
   const getDataStructure = (tipo) => {
     handleOption("acessar");
     setDataContent(codes[tipo]);
-    setbtnColors(initialColors);
+    // setbtnColors(initialColors);
     return codes[tipo];
   };
 
@@ -73,7 +73,7 @@ function App() {
               dataContent={dataContent}
               option={option}
               handleOption={handleOption}
-              btnColors={btnColors}
+              // btnColors={btnColors}
             />
           </div>
           <div
