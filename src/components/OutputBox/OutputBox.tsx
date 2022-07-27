@@ -1,6 +1,13 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import api from "../../api/api";
+import { selectdataScructure } from "../../redux/store";
 
 const OutputBox = () => {
+  const dataState = useSelector(selectdataScructure);
+  const code = api[dataState.algorithm][dataState.selectedOption];
+  // const output = eval(code);
+  // console.log(output);
   return (
     <div
       style={{
@@ -14,7 +21,8 @@ const OutputBox = () => {
         width: "50%",
       }}
     >
-      aaaaa
+      aa
+      {/* {output} */}
     </div>
   );
 };

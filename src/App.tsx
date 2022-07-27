@@ -1,37 +1,24 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import codes from "./api/codes";
+import api from "./api/api";
 import AlgoBox from "./components/AlgoBox/AlgoBox";
 import CommentsBox from "./components/CommentsBox/CommentsBox";
 import TableA from "./components/TableA/TableA";
 import TableB from "./components/TableB/TableB";
 import TeoriaBox from "./components/TeoriaBox/TeoriaBox";
 import ButtonsHead from "./components/ButtonsHead/ButtonsHead";
-import { Provider } from "react-redux";
-import store from "./redux/store";
+import { Provider, useSelector, useDispatch } from "react-redux";
+import store, { selectdataScructure } from "./redux/store";
+import { addDataScructure } from "./redux/dataStructureSlice";
+import { addActiveButton } from "./redux/btnSlice";
 
 function App() {
-  const [algoOrd, setAlgoOrd] = useState();
-  const [dataStructure, setDataStructure] = useState("array");
-  const [dataContent, setDataContent] = useState("");
-  const [option, setOption] = useState("inserir");
-  const [teoria, setTeoria] = useState("");
+  const dispatch = useDispatch();
+  // const data = useSelector(selectdataScructure);
 
-  const handleOption = (op) => {
-    setOption(op);
-  };
-
-  const getDataStructure = (tipo) => {
-    handleOption("acessar");
-    setDataContent(codes[tipo]);
-    return codes[tipo.teste];
-  };
-
-  const handleDataStructure = (tipo) => {
-    setDataStructure(tipo);
-    const { teoria } = getDataStructure(dataStructure);
-    setTeoria(teoria);
-    getDataStructure(tipo);
+  const handleDataStructure = (tipo, op = "acessar") => {
+    dispatch(addActiveButton(op));
+    dispatch(addDataScructure({ algorithm: tipo, selectedOption: op }));
   };
 
   return (
@@ -58,13 +45,7 @@ function App() {
             }}
           >
             <TableA handleDataStructure={handleDataStructure} />
-            <AlgoBox
-              dataStructure={dataStructure}
-              dataContent={dataContent}
-              option={option}
-              handleOption={handleOption}
-              // btnColors={btnColors}
-            />
+            <AlgoBox handleDataStructure={handleDataStructure} />
           </div>
           <div
             style={{
@@ -74,9 +55,9 @@ function App() {
             }}
           >
             <CommentsBox />
-            <TeoriaBox teoria={teoria} />
+            <TeoriaBox />
           </div>
-          {algoOrd && <TableB />}
+          {/* {algoOrd && <TableB />} */}
         </div>
       </div>
     </div>

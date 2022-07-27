@@ -1,6 +1,7 @@
-const codes = {
+const api = {
   array: {
-    acessar: "aa",
+    acessar: `let a = [10, 20, 30, 40]; 
+console.log(a[2])`,
     buscar: "bb",
     inserir: "cc",
     deletar: "dd",
@@ -15,4 +16,4 @@ const codes = {
   },
 };
 
-export default codes;
+export default api;

@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import api from "../../api/api";
 import { addActiveButton } from "../../redux/btnSlice";
-import { selectBtn } from "../../redux/store";
+import { selectBtn, selectdataScructure } from "../../redux/store";
 import CodeBox from "../CodeBox";
 import OutputBox from "../OutputBox/OutputBox";
 import Button from "./Button";
 
-const AlgoBox = ({ dataStructure, dataContent, option, handleOption }: any) => {
-  const dispatch = useDispatch();
-  const code = dataContent[option];
-  const state = useSelector(selectBtn);
+const AlgoBox = ({ handleDataStructure }: any) => {
+  const btnState = useSelector(selectBtn);
+  // const dispatch = useDispatch();
+  const dataState = useSelector(selectdataScructure);
+  const code = api[dataState.algorithm][dataState.selectedOption];
 
-  const handleClick = (op) => {
-    handleOption(op);
-    dispatch(addActiveButton(op));
-  };
+  // const handleClick = (op) => {
+  //   handleOption(op);
+  //   dispatch(addActiveButton(op));
+  // };
 
   return (
     <div
@@ -50,7 +52,7 @@ const AlgoBox = ({ dataStructure, dataContent, option, handleOption }: any) => {
             className="flex justify-center text-cyan-50"
           >
             <div className="text-lg font-bold">
-              {dataStructure.toUpperCase()}
+              {dataState.algorithm.toUpperCase()}
             </div>
           </div>
           <div
@@ -64,26 +66,34 @@ const AlgoBox = ({ dataStructure, dataContent, option, handleOption }: any) => {
           >
             <div style={{ display: "flex", fontSize: "18px", gap: "12px" }}>
               <Button
-                active={state.acessar}
-                onClick={() => handleClick("acessar")}
+                active={btnState.acessar}
+                onClick={() =>
+                  handleDataStructure(dataState.algorithm, "acessar")
+                }
               >
                 Acessar
               </Button>
               <Button
-                active={state.buscar}
-                onClick={() => handleClick("buscar")}
+                active={btnState.buscar}
+                onClick={() =>
+                  handleDataStructure(dataState.algorithm, "buscar")
+                }
               >
                 Buscar
               </Button>
               <Button
-                active={state.inserir}
-                onClick={() => handleClick("inserir")}
+                active={btnState.inserir}
+                onClick={() =>
+                  handleDataStructure(dataState.algorithm, "inserir")
+                }
               >
                 Inserir
               </Button>
               <Button
-                active={state.deletar}
-                onClick={() => handleClick("deletar")}
+                active={btnState.deletar}
+                onClick={() =>
+                  handleDataStructure(dataState.algorithm, "deletar")
+                }
               >
                 Deletar
               </Button>
