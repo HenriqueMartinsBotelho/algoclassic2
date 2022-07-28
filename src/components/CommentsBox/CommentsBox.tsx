@@ -1,4 +1,5 @@
 import React from "react";
+import { SiGithub } from "react-icons/si";
 
 const CommentsBox = () => {
   return (
@@ -13,8 +14,14 @@ const CommentsBox = () => {
           // borderRadius: "10px",
         }}
       >
-        <div className="text-2xl text-white  mb-6 flex justify-center">
-          Comentários
+        <div className="flex justify-between">
+          <div className="text-2xl text-white  mb-12 ">Comentários</div>
+          <div className="flex bg-gray-900 mb-12 rounded-md items-center gap-2 px-4">
+            <div>
+              <SiGithub />
+            </div>
+            <div className="text-white">Login with GitHub</div>
+          </div>
         </div>
         <div className="bg-[rgba(25,147,147,0.2)] mb-4 p-2 rounded-tl-lg">
           <div className="text-white">Alice</div>
