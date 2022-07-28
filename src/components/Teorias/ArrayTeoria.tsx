@@ -4,7 +4,7 @@ const ArrayTeoria = () => {
   return (
     <div>
       <div className="flex-col">
-        <div className="text-xl text-blue-400  mb-6 flex justify-center">
+        <div className="text-2xl text-white  mb-6 flex justify-center">
           Teoria sobre array
         </div>
 

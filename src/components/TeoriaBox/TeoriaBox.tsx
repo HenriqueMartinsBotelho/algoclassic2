@@ -10,9 +10,9 @@ const TeoriaBox = ({ teoria }: any) => {
 
   return (
     <div style={{ width: "60%" }}>
-      <div style={{ color: "white", fontSize: "22px", margin: "10px 0px" }}>
+      {/* <div style={{ color: "white", fontSize: "22px", margin: "10px 0px" }}>
         Teoria
-      </div>
+      </div> */}
       <div
         style={{
           background: "rgb(52, 58, 70)",
@@ -20,7 +20,6 @@ const TeoriaBox = ({ teoria }: any) => {
           padding: "10px",
           marginBottom: "100px",
           color: "white",
-          borderRadius: "10px",
         }}
       >
         {api[state.algorithm]["teoria"] === "array_teoria" && <ArrayTeoria />}

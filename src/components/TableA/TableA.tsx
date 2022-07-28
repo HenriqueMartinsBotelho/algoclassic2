@@ -9,8 +9,8 @@ const TableA = ({ handleDataStructure }: any) => {
         // borderRadius: "10px",
         height: "100%",
         // width: "25%",
-        flex: 1,
-        paddingLeft: "8px",
+        // flex: 1,
+        // paddingLeft: "8px",
         // border: "1px solid black",
       }}
     >

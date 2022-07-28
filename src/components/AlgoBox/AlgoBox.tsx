@@ -6,6 +6,7 @@ import { selectBtn, selectdataScructure } from "../../redux/store";
 import CodeBox from "../CodeBox";
 import OutputBox from "../OutputBox/OutputBox";
 import Button from "./Button";
+import { SiJavascript } from "react-icons/si";
 
 const AlgoBox = ({ handleDataStructure }: any) => {
   const btnState = useSelector(selectBtn);
@@ -29,7 +30,6 @@ const AlgoBox = ({ handleDataStructure }: any) => {
         // width: "30vw",
         // height: "40vh",
         background: "rgb(52, 58, 70)",
-        borderRadius: "10px",
         padding: "2px",
       }}
     >
@@ -59,7 +59,7 @@ const AlgoBox = ({ handleDataStructure }: any) => {
             style={{
               display: "flex",
               justifyContent: "space-between",
-              marginBottom: "8px",
+              marginTop: "12px",
               width: "100%",
               color: "white",
             }}
@@ -98,7 +98,10 @@ const AlgoBox = ({ handleDataStructure }: any) => {
                 Deletar
               </Button>
             </div>
-            <div style={{ color: "green", fontWeight: "bold" }}>🌳</div>
+            <div className="flex h-8 p-2 gap-2 ">
+              <SiJavascript className="mt-1 text-2xl cursor-pointer text-yellow-300" />
+              <div className="icons8-golang cursor-pointer"></div>
+            </div>
           </div>
         </div>
       </div>
