@@ -38,7 +38,7 @@ function App() {
             style={{
               display: "flex",
               background: "rgb(35, 39, 47)",
-              padding: "10px",
+              // padding: "10px",
               marginTop: "20px",
               gap: "10px",
               height: "100%",
@@ -52,10 +52,12 @@ function App() {
               display: "flex",
               gap: "10px",
               justifyContent: "space-between",
+              marginTop: "10px",
+              paddingBottom: "10px",
             }}
           >
-            <CommentsBox />
             <TeoriaBox />
+            <CommentsBox />
           </div>
           {/* {algoOrd && <TableB />} */}
         </div>

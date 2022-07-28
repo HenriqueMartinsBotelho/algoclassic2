@@ -9,7 +9,7 @@ const TeoriaBox = ({ teoria }: any) => {
   const state = useSelector(selectdataScructure);
 
   return (
-    <div style={{ width: "60%" }}>
+    <div style={{ width: "80%" }}>
       {/* <div style={{ color: "white", fontSize: "22px", margin: "10px 0px" }}>
         Teoria
       </div> */}
@@ -17,9 +17,10 @@ const TeoriaBox = ({ teoria }: any) => {
         style={{
           background: "rgb(52, 58, 70)",
           minHeight: "300px",
+          maxHeight: "388px",
           padding: "10px",
-          marginBottom: "100px",
           color: "white",
+          overflow: "auto",
         }}
       >
         {api[state.algorithm]["teoria"] === "array_teoria" && <ArrayTeoria />}

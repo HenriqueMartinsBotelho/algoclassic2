@@ -62,6 +62,67 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
+
+          <tr onMouseEnter={() => handleDataStructure("sll")}>
+            <td>
+              <Link to={`algo/singly_list`}> Singly-Linked List</Link>
+            </td>
+            <td>
+              <Link to={`sll_access`}>
+                <code className="yellow">Θ(n)</code>
+                <code className="yellow">Θ(n)</code>
+              </Link>
+            </td>
+            <td>
+              <Link to={`sll_search`}>
+                <code className="yellow">Θ(n)</code>
+                <code className="yellow">Θ(n)</code>
+              </Link>
+            </td>
+            <td>
+              <Link to={`sll_insert`}>
+                <code className="green">Θ(1)</code>
+                <code className="green">Θ(1)</code>
+              </Link>
+            </td>
+            <td>
+              <Link to={`sll_delete`}>
+                <code className="green">Θ(1)</code>
+                <code className="green">Θ(1)</code>
+              </Link>
+            </td>
+
+            <td>
+              <code className="yellow">O(n)</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://en.wikipedia.org/wiki/Doubly_linked_list">
+                Doubly-Linked List
+              </a>
+            </td>
+            <td>
+              <code className="yellow">Θ(n)</code>
+              <code className="yellow">Θ(n)</code>
+            </td>
+            <td>
+              <code className="yellow">Θ(n)</code>
+              <code className="yellow">Θ(n)</code>
+            </td>
+            <td>
+              <code className="green">Θ(1)</code>
+              <code className="green">Θ(1)</code>
+            </td>
+            <td>
+              <code className="green">Θ(1)</code>
+              <code className="green">Θ(1)</code>
+            </td>
+
+            <td>
+              <code className="yellow">O(n)</code>
+            </td>
+          </tr>
           <tr onMouseEnter={() => handleDataStructure("stack")}>
             <td>
               <a href="http://en.wikipedia.org/wiki/Stack_(abstract_data_type)">
@@ -122,66 +183,6 @@ const TableA = ({ handleDataStructure }: any) => {
                 <code className="green">Θ(1)</code>
                 <code className="green">Θ(1)</code>
               </Link>
-            </td>
-            <td>
-              <code className="green">Θ(1)</code>
-              <code className="green">Θ(1)</code>
-            </td>
-
-            <td>
-              <code className="yellow">O(n)</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <Link to={`algo/singly_list`}> Singly-Linked List</Link>
-            </td>
-            <td>
-              <Link to={`sll_access`}>
-                <code className="yellow">Θ(n)</code>
-                <code className="yellow">Θ(n)</code>
-              </Link>
-            </td>
-            <td>
-              <Link to={`sll_search`}>
-                <code className="yellow">Θ(n)</code>
-                <code className="yellow">Θ(n)</code>
-              </Link>
-            </td>
-            <td>
-              <Link to={`sll_insert`}>
-                <code className="green">Θ(1)</code>
-                <code className="green">Θ(1)</code>
-              </Link>
-            </td>
-            <td>
-              <Link to={`sll_delete`}>
-                <code className="green">Θ(1)</code>
-                <code className="green">Θ(1)</code>
-              </Link>
-            </td>
-
-            <td>
-              <code className="yellow">O(n)</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://en.wikipedia.org/wiki/Doubly_linked_list">
-                Doubly-Linked List
-              </a>
-            </td>
-            <td>
-              <code className="yellow">Θ(n)</code>
-              <code className="yellow">Θ(n)</code>
-            </td>
-            <td>
-              <code className="yellow">Θ(n)</code>
-              <code className="yellow">Θ(n)</code>
-            </td>
-            <td>
-              <code className="green">Θ(1)</code>
-              <code className="green">Θ(1)</code>
             </td>
             <td>
               <code className="green">Θ(1)</code>

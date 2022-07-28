@@ -37,8 +37,20 @@ const ArrayTeoria = () => {
           <div className="text-xm font-bold text-blue-400  mb-4 mt-6">
             2) Buscar um elemento de um array
           </div>
-          Para buscar um elemento em um array não ordenado precisamos percorrer
-          todos os elementos do array.
+          Para garantir que um dado elemento pertence a um array não ordenado
+          precisamos percorrer todos os elementos do array.
+        </div>
+        <div>
+          <div className="text-xm font-bold text-blue-400  mb-4 mt-6">
+            3) Inserir um elemento de um array
+          </div>
+          Inserir um elemento em um array no médio/pior caso leva O(n).
+        </div>
+        <div>
+          <div className="text-xm font-bold text-blue-400  mb-4 mt-6">
+            4) Deletar um elemento de um array
+          </div>
+          Deletar um elemento em um array no médio/pior caso leva O(n).
         </div>
       </div>
     </div>
