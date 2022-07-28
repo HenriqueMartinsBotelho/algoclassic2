@@ -13,16 +13,24 @@ const ButtonsHead = () => {
         }}
       >
         <button className="btn_page">
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <div className="text-white">Home</div>
+          </Link>
         </button>
         <button className="btn_page">
-          <Link to="training">Treinar</Link>
+          <Link to="/">
+            <div className="text-white">Treinar</div>
+          </Link>
         </button>
+        {/* <button className="btn_page">
+          <Link to="/">
+            <div className="text-white">Animações</div>
+          </Link>
+        </button> */}
         <button className="btn_page">
-          <Link to="/">Animações</Link>
-        </button>
-        <button className="btn_page">
-          <Link to="about">Sobre</Link>
+          <Link to="about">
+            <div className="text-white">Sobre</div>
+          </Link>
         </button>
       </div>
     </div>

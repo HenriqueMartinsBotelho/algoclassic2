@@ -5,7 +5,9 @@ import { selectdataScructure } from "../../redux/store";
 
 const OutputBox = () => {
   const dataState = useSelector(selectdataScructure);
-  const code = api[dataState.algorithm][dataState.selectedOption];
+  const ans = api[dataState.algorithm]["resposta"];
+
+  // showCode();
   // const output = eval(code);
   // console.log(output);
   return (
@@ -21,8 +23,10 @@ const OutputBox = () => {
         width: "50%",
       }}
     >
-      aa
-      {/* {output} */}
+      {dataState.selectedOption === "acessar" && ans[0]}
+      {dataState.selectedOption === "buscar" && ans[1]}
+      {dataState.selectedOption === "inserir" && ans[2]}
+      {dataState.selectedOption === "deletar" && ans[3]}
     </div>
   );
 };

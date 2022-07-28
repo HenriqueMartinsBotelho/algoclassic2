@@ -41,32 +41,22 @@ const TableA = ({ handleDataStructure }: any) => {
             {/* <th>Deletion</th> */}
           </tr>
           <tr onMouseEnter={() => handleDataStructure("array")}>
+            <td>Array</td>
             <td>
-              <Link to={`algo/array`}> Array</Link>
+              <code className="green">Θ(1)</code>
+              <code className="green">Θ(1)</code>
             </td>
             <td>
-              <Link to={`array_access`}>
-                <code className="green">Θ(1)</code>
-                <code className="green">Θ(1)</code>
-              </Link>
+              <code className="yellow">Θ(n)</code>
+              <code className="yellow">Θ(n)</code>
             </td>
             <td>
-              <Link to={`array_search`}>
-                <code className="yellow">Θ(n)</code>
-                <code className="yellow">Θ(n)</code>
-              </Link>
+              <code className="yellow">Θ(n)</code>
+              <code className="yellow">Θ(n)</code>
             </td>
             <td>
-              <Link to={`array_insert`}>
-                <code className="yellow">Θ(n)</code>
-                <code className="yellow">Θ(n)</code>
-              </Link>
-            </td>
-            <td>
-              <Link to={`array_delete`}>
-                <code className="yellow">Θ(n)</code>
-                <code className="yellow">Θ(n)</code>
-              </Link>
+              <code className="yellow">Θ(n)</code>
+              <code className="yellow">Θ(n)</code>
             </td>
             <td>
               <code className="yellow">O(n)</code>

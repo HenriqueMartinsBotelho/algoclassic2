@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import api from "../../api/api";
 import { selectdataScructure } from "../../redux/store";
+import ArrayTeoria from "../Teorias/ArrayTeoria";
+import StackTeoria from "../Teorias/StackTeoria";
 
 const TeoriaBox = ({ teoria }: any) => {
   const state = useSelector(selectdataScructure);
@@ -21,7 +23,8 @@ const TeoriaBox = ({ teoria }: any) => {
           borderRadius: "10px",
         }}
       >
-        {api[state.algorithm]["teoria"]}
+        {api[state.algorithm]["teoria"] === "array_teoria" && <ArrayTeoria />}
+        {api[state.algorithm]["teoria"] === "stack_teoria" && <StackTeoria />}
       </div>
     </div>
   );
