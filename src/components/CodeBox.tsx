@@ -12,7 +12,7 @@ interface ICodeBox {
 
 const CodeBox = ({ code, width, style, minWidth }: ICodeBox) => {
   return (
-    <>
+    <div style={{ overflow: "auto", maxHeight: "470px", width: "100%" }}>
       <CodeMirror
         theme={oneDark}
         value={code}
@@ -21,7 +21,7 @@ const CodeBox = ({ code, width, style, minWidth }: ICodeBox) => {
         minWidth={minWidth}
         extensions={[javascript({ jsx: true })]}
       />
-    </>
+    </div>
   );
 };
 

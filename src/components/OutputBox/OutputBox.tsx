@@ -14,7 +14,7 @@ const OutputBox = () => {
     <div
       style={{
         display: "flex",
-        height: "50vh",
+        height: "470px",
         background: "rgb(85, 92, 107)",
         // borderLeft: "1px solid whitesmoke",
         color: "white",
@@ -23,10 +23,18 @@ const OutputBox = () => {
         width: "50%",
       }}
     >
-      {dataState.selectedOption === "acessar" && ans[0]}
-      {dataState.selectedOption === "buscar" && ans[1]}
-      {dataState.selectedOption === "inserir" && ans[2]}
-      {dataState.selectedOption === "deletar" && ans[3]}
+      {dataState.selectedOption === "acessar" && (
+        <div dangerouslySetInnerHTML={{ __html: ans[0] }} />
+      )}
+      {dataState.selectedOption === "buscar" && (
+        <div dangerouslySetInnerHTML={{ __html: ans[1] }} />
+      )}
+      {dataState.selectedOption === "inserir" && (
+        <div dangerouslySetInnerHTML={{ __html: ans[2] }} />
+      )}
+      {dataState.selectedOption === "deletar" && (
+        <div dangerouslySetInnerHTML={{ __html: ans[3] }} />
+      )}
     </div>
   );
 };

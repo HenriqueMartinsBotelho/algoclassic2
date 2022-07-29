@@ -26,11 +26,12 @@ const AlgoBox = ({ handleDataStructure }: any) => {
         flexDirection: "column",
         flex: 1,
         // width: "50%",
-        height: "100%",
+        // height: "470px",
         // width: "30vw",
         // height: "40vh",
         background: "rgb(52, 58, 70)",
         padding: "2px",
+        // background: "red",
       }}
     >
       <div
@@ -112,7 +113,13 @@ const AlgoBox = ({ handleDataStructure }: any) => {
           background: "rgb(52, 58, 70)",
         }}
       >
-        <div style={{ display: "flex", width: "50%", height: "100%" }}>
+        <div
+          style={{
+            display: "flex",
+            width: "50%",
+            // height: "100%",
+          }}
+        >
           <CodeBox
             code={code}
             style={{

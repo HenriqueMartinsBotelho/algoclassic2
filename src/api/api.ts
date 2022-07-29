@@ -1,3 +1,5 @@
+const breakLine = `<br/>\n\n`;
+
 const api = {
   array: {
     acessar: `let a = [10, 20, 30, 40]; 
@@ -35,19 +37,143 @@ arr.splice(i, 1)
 console.log(arr)`,
     teoria: "array_teoria",
     resposta: [
-      "30",
+      `30`,
       "Elemento presente na posição 2",
       "[10, 20, 80, 30, 40]",
       "[10, 20, 40]",
     ],
   },
   sll: {
-    acessar: "ee",
-    buscar: "ff",
-    inserir: "gg",
-    deletar: "hh",
+    acessar: `class Node{
+  constructor(val){
+      this.val = val;
+      this.next = null;
+  }
+}
+
+const a = new Node('A')
+const b = new Node('B')
+const c = new Node('C')
+const d = new Node('D')
+    
+a.next = b
+b.next = c
+c.next = d
+
+const getNth = (head, index) => {
+  let current = head
+  let count = 0
+  while(current != null){
+      if(count === index) {
+          return current
+      }
+      count++
+      current = current.next 
+  }
+  return -1;
+}
+  
+const element = getNth(a,2)
+console.log(element.val)`,
+    buscar: `class Node{
+  constructor(val){
+      this.val = val;
+      this.next = null;
+  }
+}
+
+const a = new Node('A')
+const b = new Node('B')
+const c = new Node('C')
+const d = new Node('D')
+    
+a.next = b
+b.next = c
+c.next = d
+  
+const searchElement = (head, val) => {
+  let current = head
+  while (current != null){
+    if(current.val === val) return true
+    current = current.next
+  }
+  return false
+}
+ 
+console.log(searchElement(a, 'B'))
+console.log(searchElement(a, 'E'))
+`,
+    inserir: `class Node{
+  constructor(val){
+      this.val = val;
+      this.next = null;
+  }
+}
+
+const a = new Node('A')
+const b = new Node('B')
+const c = new Node('C')
+const d = new Node('D')
+    
+a.next = b
+b.next = c
+c.next = d
+  
+const insertAtHead = (head, val) => {
+  let newNode = new Node(val)
+  if(!head){
+    head = newNode
+    return head
+  }else{
+    newNode.next = head
+    head = newNode
+  }
+  return head
+}
+
+const printLinkedList = (head) => {
+    let current = head
+    while(current != null){
+        console.log(current.val)
+        current = current.next
+    }
+}
+
+let newList = insertAtHead(a, 30)
+printLinkedList(newList)`,
+    deletar: `class Node{
+  constructor(val){
+      this.val = val;
+      this.next = null;
+  }
+}
+let head = new Node('A')
+let b = new Node('B')
+let c = new Node('C')
+let d = new Node('D')
+    
+head.next = b
+b.next = c
+c.next = d
+  
+head = b
+   
+const printLinkedList = (head) => {
+    let current = head
+    while(current != null){
+        console.log(current.val)
+        current = current.next
+    }
+}
+  
+printLinkedList(head)`,
     teoria: "sll_teoria",
-    resposta: "30",
+    resposta: [
+      "C",
+      "true<br/>false",
+      `30 <br/> A <br/> B <br/> C <br/>D`,
+      "B<br/>C<br/>D",
+    ],
   },
   dll: {
     acessar: "ee",
