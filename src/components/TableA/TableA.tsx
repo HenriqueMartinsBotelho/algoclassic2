@@ -96,7 +96,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
-          <tr>
+          <tr onMouseEnter={() => handleDataStructure("dll")}>
             <td>
               <a href="http://en.wikipedia.org/wiki/Doubly_linked_list">
                 Doubly-Linked List
@@ -158,7 +158,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
-          <tr>
+          <tr onMouseEnter={() => handleDataStructure("queue")}>
             <td>
               <Link to={`queue_access`}>
                 <a href="http://en.wikipedia.org/wiki/Queue_(abstract_data_type)">
@@ -193,7 +193,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
-          <tr>
+          <tr onMouseEnter={() => handleDataStructure("skip")}>
             <td>
               <a href="http://en.wikipedia.org/wiki/Skip_list">Skip List</a>
             </td>
@@ -218,7 +218,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="orange">O(n log(n))</code>
             </td>
           </tr>
-          <tr>
+          <tr onMouseEnter={() => handleDataStructure("hash")}>
             <td>
               <a href="http://en.wikipedia.org/wiki/Hash_table">Hash Table</a>
             </td>
@@ -243,7 +243,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
-          <tr>
+          <tr onMouseEnter={() => handleDataStructure("bst")}>
             <td>
               <a href="http://en.wikipedia.org/wiki/Binary_search_tree">
                 Binary Search Tree
@@ -270,7 +270,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
-          <tr>
+          <tr onMouseEnter={() => handleDataStructure("ct")}>
             <td>
               <a href="https://en.wikipedia.org/wiki/Cartesian_tree">
                 Cartesian Tree
@@ -296,7 +296,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
-          <tr>
+          <tr onMouseEnter={() => handleDataStructure("bt")}>
             <td>
               <a href="http://en.wikipedia.org/wiki/B_tree"> B-Tree</a>
             </td>
@@ -320,7 +320,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
-          <tr>
+          <tr onMouseEnter={() => handleDataStructure("rbt")}>
             <td>
               <a href="http://en.wikipedia.org/wiki/Red-black_tree">
                 Red-Black Tree
@@ -346,7 +346,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
-          <tr>
+          <tr onMouseEnter={() => handleDataStructure("st")}>
             <td>
               <a href="https://en.wikipedia.org/wiki/Splay_tree">Splay Tree</a>
             </td>
@@ -370,7 +370,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
-          <tr>
+          <tr onMouseEnter={() => handleDataStructure("avl")}>
             <td>
               <a href="http://en.wikipedia.org/wiki/AVL_tree">AVL Tree</a>
             </td>
@@ -394,7 +394,7 @@ const TableA = ({ handleDataStructure }: any) => {
               <code className="yellow">O(n)</code>
             </td>
           </tr>
-          <tr>
+          <tr onMouseEnter={() => handleDataStructure("kt")}>
             <td>
               <a href="http://en.wikipedia.org/wiki/K-d_tree"> KD Tree</a>
             </td>
