@@ -176,7 +176,7 @@ printLinkedList(head)`,
     ],
   },
   dll: {
-    acessar: "ee",
+    acessar: "",
     buscar: `function Node(element) {
   this.element = element;
   this.next = null;
@@ -341,12 +341,40 @@ letters.display()
     ],
   },
   queue: {
-    acessar: "ee",
-    buscar: "ff",
-    inserir: "gg",
-    deletar: "hh",
+    acessar: `const queue = []
+
+queue.push(1)
+queue.push(2)
+queue.push(3)
+
+console.log(queue[2])
+`,
+    buscar: `const queue = []
+
+queue.push(1)
+queue.push(2)
+queue.push(3)
+
+console.log(queue.includes(2))
+`,
+    inserir: `const queue = []
+
+queue.push(1)
+queue.push(2)
+queue.push(3)
+
+console.log(queue)`,
+    deletar: `const queue = []
+
+queue.push(1)
+queue.push(2)
+queue.push(3)
+queue.shift()
+
+console.log(queue)
+    `,
     teoria: "queue_teoria",
-    resposta: "30",
+    resposta: ["3", "true", `[1,  2, 3]`, `[2,3]`],
   },
   skip: {
     acessar: "ee",
@@ -695,12 +723,40 @@ inOrder(nums.root);`,
     resposta: "30",
   },
   stack: {
-    acessar: "ee",
-    buscar: "ff",
-    inserir: "gg",
-    deletar: "hh",
+    acessar: `const stack = []
+
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+console.log(stack[2])
+`,
+    buscar: `const stack = []
+
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+console.log(stack.includes(2))
+`,
+    inserir: `const stack = []
+
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+console.log(stack)`,
+    deletar: `const stack = []
+
+stack.push(1)
+stack.push(2)
+stack.push(3)
+stack.pop()
+
+console.log(stack)
+    `,
     teoria: "stack_teoria",
-    resposta: "30",
+    resposta: ["3", "true", `[1,  2, 3]`, `[1,2]`],
   },
 };
 
