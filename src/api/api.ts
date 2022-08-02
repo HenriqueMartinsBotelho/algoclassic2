@@ -177,11 +177,168 @@ printLinkedList(head)`,
   },
   dll: {
     acessar: "ee",
-    buscar: "ff",
-    inserir: "gg",
-    deletar: "hh",
+    buscar: `function Node(element) {
+  this.element = element;
+  this.next = null;
+  this.previous = null;
+}
+
+function DLL() {
+  this.head = new Node("head");
+  this.find = find;
+  this.insert = insert;
+  this.display = display;
+}
+
+function display() {
+  var currNode = this.head;
+  while (!(currNode.next == null)) {
+      console.log(currNode.next.element);
+      currNode = currNode.next;
+  }
+}
+
+function insert(newElement, item) {
+  var newNode = new Node(newElement);
+  var current = this.find(item);
+  newNode.next = current.next;
+  newNode.previous = current;
+  current.next = newNode;
+}
+
+// Código principal
+
+function find(item) {
+  var currNode = this.head;
+  while (currNode.element !== item) {
+      currNode = currNode.next;
+  }
+  return currNode;
+}
+
+var letters = new DLL();
+letters.insert("AAA", "head");
+letters.insert("BBB", "AAA");
+letters.insert("CCC", "BBB");
+letters.insert("DDD", "CCC");
+console.log(letters.find("DDD"))`,
+    inserir: `function Node(element) {
+  this.element = element;
+  this.next = null;
+  this.previous = null;
+}
+
+function DLL() {
+  this.head = new Node("head");
+  this.find = find;
+  this.insert = insert;
+  this.display = display;
+}
+
+function display() {
+  var currNode = this.head;
+  while (!(currNode.next == null)) {
+      console.log(currNode.next.element);
+      currNode = currNode.next;
+  }
+}
+
+function find(item) {
+  var currNode = this.head;
+  while (currNode.element !== item) {
+      currNode = currNode.next;
+  }
+  return currNode;
+}
+
+// Código principal
+
+function insert(newElement, item) {
+  var newNode = new Node(newElement);
+  var current = this.find(item);
+  newNode.next = current.next;
+  newNode.previous = current;
+  current.next = newNode;
+}
+  
+
+var letters = new DLL();
+letters.insert("AAA", "head");
+letters.insert("BBB", "AAA");
+letters.insert("CCC", "BBB");
+letters.insert("DDD", "CCC");
+letters.display();
+    `,
+    deletar: `function Node(element) {
+  this.element = element;
+  this.next = null;
+  this.previous = null;
+}
+
+function DLL() {
+  this.head = new Node("head");
+  this.find = find;
+  this.insert = insert;
+  this.remove = remove;
+  this.display = display;
+}
+
+function display() {
+  var currNode = this.head;
+  while (!(currNode.next == null)) {
+      console.log(currNode.next.element);
+      currNode = currNode.next;
+  }
+}
+
+function insert(newElement, item) {
+  var newNode = new Node(newElement);
+  var current = this.find(item);
+  newNode.next = current.next;
+  newNode.previous = current;
+  current.next = newNode;
+}
+  
+function find(item) {
+  var currNode = this.head;
+  while (currNode.element !== item) {
+      currNode = currNode.next;
+  }
+  return currNode;
+}
+
+// Código principal
+
+function remove(item) {
+  var currNode = this.find(item);
+  if (!(currNode.next == null)) {
+      currNode.previous.next = currNode.next;
+      currNode.next.previous = currNode.previous;
+      currNode.next = null;
+      currNode.previous = null;
+  }
+}
+
+var letters = new DLL();
+letters.insert("AAA", "head");
+letters.insert("BBB", "AAA");
+letters.insert("CCC", "BBB");
+letters.insert("DDD", "CCC");
+letters.remove("BBB")
+letters.display()
+    `,
     teoria: "dll_teoria",
-    resposta: "30",
+    resposta: [
+      "",
+      `Node {element: "DDD", next: null, previous: Node, constructor: Object}`,
+      `AAA <br/>
+    BBB <br/>
+    CCC <br/>
+    DDD`,
+      `AAA <br/> 
+      CCC <br/>
+      DDD `,
+    ],
   },
   queue: {
     acessar: "ee",
@@ -208,12 +365,286 @@ printLinkedList(head)`,
     resposta: "30",
   },
   bst: {
-    acessar: "ee",
-    buscar: "ff",
-    inserir: "gg",
-    deletar: "hh",
+    acessar: "",
+    buscar: `function Node(data, left, right) {
+  this.data = data;
+  this.left = left;
+  this.right = right;
+  this.show = show;
+}
+function show() {
+  return this.data;
+}
+
+
+function find(data) {
+  var current = this.root;
+  while (current.data !== data) {
+    if (data < current.data) {
+      current = current.left;
+    } else {
+      current = current.right;
+    }
+    if (current == null) {
+      return null;
+    }
+  }
+  return current;
+}
+
+function BST() {
+  this.root = null;
+  this.insert = insert;
+  this.find = find;
+}
+
+// Código principal
+
+function insert(data) {
+  var n = new Node(data, null, null);
+  if (this.root == null) {
+    this.root = n;
+  } else {
+    var current = this.root;
+    var parent;
+    while (true) {
+      parent = current;
+      if (data < current.data) {
+        current = current.left;
+        if (current == null) {
+          parent.left = n;
+          break;
+        }
+      } else {
+        current = current.right;
+        if (current == null) {
+          parent.right = n;
+          break;
+        }
+      }
+    }
+  }
+}
+
+var nums = new BST();
+nums.insert(33);
+nums.insert(42);
+nums.insert(14);
+nums.insert(31);
+nums.insert(2);
+nums.insert(70);
+nums.insert(18);
+
+console.log(nums.find(42))`,
+    inserir: `function Node(data, left, right) {
+  this.data = data;
+  this.left = left;
+  this.right = right;
+  this.show = show;
+}
+
+function show() {
+  return this.data;
+}
+
+function inOrder(node) {
+  if (!(node == null)) {
+    inOrder(node.left);
+    console.log(node.show() + " ");
+    inOrder(node.right);
+  }
+}
+
+function preOrder(node) {
+  if (!(node == null)) {
+  console.log(node.show() + " ");
+  preOrder(node.left);
+  preOrder(node.right);
+  }
+  }
+
+function BST() {
+  this.root = null;
+  this.insert = insert;
+  this.inOrder = inOrder;
+  this.preOrder = preOrder;
+}
+
+function insert(data) {
+  var n = new Node(data, null, null);
+  if (this.root == null) {
+    this.root = n;
+  } else {
+    var current = this.root;
+    var parent;
+    while (true) {
+      parent = current;
+      if (data < current.data) {
+        current = current.left;
+        if (current == null) {
+          parent.left = n;
+          break;
+        }
+      } else {
+        current = current.right;
+        if (current == null) {
+          parent.right = n;
+          break;
+        }
+      }
+    }
+  }
+}
+
+var nums = new BST();
+nums.insert(33);
+nums.insert(42);
+nums.insert(14);
+nums.insert(31);
+nums.insert(2);
+nums.insert(70);
+nums.insert(18);
+console.log("Inorder traversal: ");
+inOrder(nums.root);
+console.log("PreOrder traversal: ");
+preOrder(nums.root);
+    `,
+    deletar: `function Node(data, left, right) {
+  this.data = data;
+  this.left = left;
+  this.right = right;
+  this.show = show;
+}
+function show() {
+  return this.data;
+}
+
+function inOrder(node) {
+  if (!(node == null)) {
+    inOrder(node.left);
+    console.log(node.show() + " ");
+    inOrder(node.right);
+  }
+}
+
+function getSmallest(node) {
+  if (node.left == null) {
+    return node;
+  } else {
+    return getSmallest(node.left);
+  }
+}
+
+function remove(data) {
+  const root = removeNode(this.root, data);
+}
+function removeNode(node, data) {
+  if (node == null) {
+    return null;
+  }
+  if (data == node.data) {
+    // node has no children
+    if (node.left == null && node.right == null) {
+      return null;
+    }
+    // node has no left child
+    if (node.left == null) {
+      return node.right;
+    }
+    // node has no right child
+    if (node.right == null) {
+      return node.left;
+    }
+    // node has two children
+    var tempNode = getSmallest(node.right);
+    node.data = tempNode.data;
+    node.right = removeNode(node.right, tempNode.data);
+    return node;
+  } else if (data < node.data) {
+    node.left = removeNode(node.left, data);
+    return node;
+  } else {
+    node.right = removeNode(node.right, data);
+    return node;
+  }
+}
+
+function BST() {
+  this.root = null;
+  this.insert = insert;
+  this.remove = remove;
+  this.inOrder = inOrder;
+}
+
+function insert(data) {
+  var n = new Node(data, null, null);
+  if (this.root == null) {
+    this.root = n;
+  } else {
+    var current = this.root;
+    var parent;
+    while (true) {
+      parent = current;
+      if (data < current.data) {
+        current = current.left;
+        if (current == null) {
+          parent.left = n;
+          break;
+        }
+      } else {
+        current = current.right;
+        if (current == null) {
+          parent.right = n;
+          break;
+        }
+      }
+    }
+  }
+}
+
+var nums = new BST();
+nums.insert(33);
+nums.insert(42);
+nums.insert(14);
+nums.insert(31);
+nums.insert(2);
+nums.insert(70);
+nums.insert(18);
+
+nums.remove(2);
+
+console.log("Inorder traversal: ");
+inOrder(nums.root);`,
     teoria: "bst_teoria",
-    resposta: "30",
+    resposta: [
+      "",
+      `Node {data: 42, left: null, right: Node, show: ƒ show(), constructor: Object}
+      `,
+      `Inorder traversal: <br/> 
+    2  <br/>
+    14  <br/>
+    18  <br/>
+    31  <br/>
+    33  <br/>
+    42  <br/>
+    70  <br/>
+    PreOrder traversal:<br/>  
+    33  <br/>
+    14  <br/>
+    2  <br/>
+    31  <br/>
+    18  <br/>
+    42  <br/>
+    70  `,
+      `
+      Inorder traversal:  <br/> 
+      14  <br/> 
+      18  <br/> 
+      31  <br/> 
+      33  <br/> 
+      42  <br/> 
+      70`,
+    ],
   },
   ct: {
     acessar: "ee",

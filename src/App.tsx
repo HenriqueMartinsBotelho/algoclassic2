@@ -16,7 +16,7 @@ function App() {
   const dispatch = useDispatch();
   // const data = useSelector(selectdataScructure);
 
-  const handleDataStructure = (tipo, op = "acessar") => {
+  const handleDataStructure = (tipo, op = "buscar") => {
     dispatch(addActiveButton(op));
     dispatch(addDataScructure({ algorithm: tipo, selectedOption: op }));
   };

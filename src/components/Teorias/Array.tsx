@@ -5,7 +5,7 @@ const ArrayTeoria = () => {
     <div>
       <div className="flex-col">
         <div className="text-2xl text-white  mb-6 flex justify-center">
-          Teoria sobre array
+          Array
         </div>
 
         <div className="mb-6 bg-slate-600 p-2">

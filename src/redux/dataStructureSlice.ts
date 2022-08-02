@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialValues = {
   algorithm: "array",
-  selectedOption: "acessar",
+  selectedOption: "buscar",
 };
 
 export const slice = createSlice({

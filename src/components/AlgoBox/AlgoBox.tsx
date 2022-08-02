@@ -99,9 +99,14 @@ const AlgoBox = ({ handleDataStructure }: any) => {
                 Deletar
               </Button>
             </div>
-            <div className="flex h-8 p-2 gap-2 ">
-              <SiJavascript className="mt-1 text-2xl cursor-pointer text-yellow-300" />
-              <div className="icons8-golang cursor-pointer"></div>
+            <div className="flex">
+              <button className="text-base leading-tight  border rounded-lg py-2 px-4 bg-pink-500">
+                Exercícios
+              </button>
+              {/* <div className="flex h-8 p-2 gap-2 ">
+                <SiJavascript className="mt-1 text-2xl cursor-pointer text-yellow-300" />
+                <div className="icons8-golang cursor-pointer"></div>
+              </div> */}
             </div>
           </div>
         </div>

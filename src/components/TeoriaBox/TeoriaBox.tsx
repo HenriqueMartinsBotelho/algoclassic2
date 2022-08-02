@@ -30,8 +30,7 @@ const TeoriaBox = ({ teoria }: any) => {
       <div
         style={{
           background: "rgb(52, 58, 70)",
-          minHeight: "300px",
-          maxHeight: "388px",
+          height: "388px",
           padding: "10px",
           color: "white",
           overflow: "auto",
