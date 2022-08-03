@@ -22,12 +22,12 @@ function App() {
   };
 
   return (
-    <div style={{ background: "rgb(35, 39, 47)" }}>
+    <div style={{ background: "rgb(0,0,0)" }}>
       <div
         style={{
           padding: "10px",
           height: "75vh",
-          background: "rgb(35, 39, 47)",
+          background: "rgb(0,0,0)",
         }}
       >
         <div
@@ -37,7 +37,7 @@ function App() {
           <div
             style={{
               display: "flex",
-              background: "rgb(35, 39, 47)",
+              background: "rgb(0,0,0)",
               // padding: "10px",
               marginTop: "20px",
               gap: "10px",

@@ -5,13 +5,13 @@ const TableA = ({ handleDataStructure }: any) => {
   return (
     <div
       style={{
-        background: "rgb(52, 58, 70)",
+        background: "rgb(0, 0, 0)",
         // borderRadius: "10px",
         height: "100%",
         // width: "25%",
         // flex: 1,
         // paddingLeft: "8px",
-        // border: "1px solid black",
+        border: "1px solid white",
       }}
     >
       <table className="table table-bordered table-striped">

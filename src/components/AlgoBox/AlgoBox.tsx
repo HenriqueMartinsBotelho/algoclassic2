@@ -29,9 +29,10 @@ const AlgoBox = ({ handleDataStructure }: any) => {
         // height: "470px",
         // width: "30vw",
         // height: "40vh",
-        background: "rgb(52, 58, 70)",
+        background: "rgb(0, 0, 0)",
         padding: "2px",
         // background: "red",
+        border: "1px solid white",
       }}
     >
       <div
@@ -65,7 +66,7 @@ const AlgoBox = ({ handleDataStructure }: any) => {
               color: "white",
             }}
           >
-            <div style={{ display: "flex", fontSize: "18px", gap: "12px" }}>
+            <div style={{ display: "flex", fontSize: "14px", gap: "12px" }}>
               <Button
                 active={btnState.acessar}
                 onClick={() =>
@@ -100,7 +101,7 @@ const AlgoBox = ({ handleDataStructure }: any) => {
               </Button>
             </div>
             <div className="flex">
-              <button className="text-base leading-tight  border rounded-lg py-2 px-4 bg-pink-500">
+              <button className="text-xs font-bold leading-tight  border-red-300 rounded-lg py-2 px-4 bg-pink-500">
                 Exercícios
               </button>
               {/* <div className="flex h-8 p-2 gap-2 ">
@@ -115,7 +116,7 @@ const AlgoBox = ({ handleDataStructure }: any) => {
         style={{
           display: "flex",
           padding: "8px",
-          background: "rgb(52, 58, 70)",
+          background: "rgb(0, 0, 0)",
         }}
       >
         <div

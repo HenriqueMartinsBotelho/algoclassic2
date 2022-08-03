@@ -6,12 +6,13 @@ const CommentsBox = () => {
     <div style={{ width: "40%" }}>
       <div
         style={{
-          background: "rgb(52, 58, 70)",
+          background: "rgb(0, 0, 0)",
           minHeight: "300px",
           maxHeight: "388px",
           overflow: "auto",
           padding: "14px",
           color: "white",
+          border: "1px solid white",
           // borderRadius: "10px",
         }}
       >

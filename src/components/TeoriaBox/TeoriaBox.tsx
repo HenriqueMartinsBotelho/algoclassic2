@@ -29,10 +29,11 @@ const TeoriaBox = ({ teoria }: any) => {
       </div> */}
       <div
         style={{
-          background: "rgb(52, 58, 70)",
+          background: "rgb(0, 0, 0)",
           height: "388px",
           padding: "10px",
           color: "white",
+          border: "1px solid white",
           overflow: "auto",
         }}
       >
