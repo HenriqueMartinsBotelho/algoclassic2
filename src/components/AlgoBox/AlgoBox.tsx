@@ -53,7 +53,7 @@ const AlgoBox = ({ handleDataStructure }: any) => {
             // }}
             className="flex justify-center text-cyan-50"
           >
-            <div className="text-lg font-bold">
+            <div className="text-lg font-bold text-[#ff1561]">
               {dataState.algorithm.toUpperCase()}
             </div>
           </div>

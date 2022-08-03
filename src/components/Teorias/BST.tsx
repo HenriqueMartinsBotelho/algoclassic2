@@ -5,7 +5,7 @@ import bst_img2 from "./../../assets/bst_img2.png";
 const BST = () => {
   return (
     <div className="flex-col">
-      <div className="text-2xl text-white  mb-6 flex justify-center">
+      <div className="text-2xl text-[#ff1561]  mb-6 flex justify-center">
         Binary Search Tree
       </div>
 

@@ -17,7 +17,7 @@ const CommentsBox = () => {
         }}
       >
         <div className="flex justify-between">
-          <div className="text-2xl text-white  mb-12 ">Comentários</div>
+          <div className="text-2xl text-[#ff1561]  mb-12 ">Comentários</div>
           <div className="flex bg-gray-900 mb-12 rounded-md items-center gap-2 px-4">
             <div>
               <SiGithub />
